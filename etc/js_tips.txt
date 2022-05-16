@@ -1,50 +1,4 @@
 
-## -----------Push / pop Arrays -------------##
-
-let myStack = [];
-myStack.push(1);
-myStack.push(2);
-myStack.push(3);
-console.log(myStack);  // 1,2,3
-
-After pushing variables to the array, we can then pop variables off from the end.
-
-console.log(myStack.pop());
-console.log(myStack);
-This will print out the variable we popped from the array, 
-and what's left of the array:
-3           // the result from myStack.pop()
-1,2         // what myStack contains now
-
-## -----------Push / pop Arrays -------------##
-
-
-## -----------Shift / unshift -------------##
-
-console.log(myQueue.shift());
-The shift keyword will remove 
-the variables of the array in the exact order they were inserted in
-
-The unshift method is used to insert a variable at the beginning of an array. 
-For example:
-
-let myArray = [1,2,3];
-myArray.unshift(0);
-console.log(myArray);       // will print out 0,1,2,3
-
-## -----------Shift / unshift -------------##
-
-
-## -----------  Splicing  -------------##
-
-
-let myArray = [0,1,2,3,4,5,6,7,8,9];
-let splice = myArray.splice(3,5);
-
-console.log(splice);        // will print out 3,4,5,6,7
-console.log(myArray);       // will print out 0,1,2,8,9
-
-## -----------  Splicing  -------------##
 
 
 ## -----------  Random Maths in JS  -------------##
@@ -148,6 +102,262 @@ personObject.age = 23;
 personObject["salary"] = 14000;
 
 ## -----------  Objects  -------------##
+## -----------  Arrays  -------------##
+
+Special data structure to store ordered collections.
+There are two syntaxes for creating an empty array:
+
+let arr = new Array();
+let arr = [];
+Almost all the time, the second syntax is used. 
+We can supply initial elements in the brackets:
+
+let fruits = ["Apple", "Orange", "Plum"];
+Array elements are numbered, starting with zero.
+
+##      We can get an element by its number in square brackets:
+
+let fruits = ["Apple", "Orange", "Plum"];
+
+alert( fruits[0] ); // Apple
+alert( fruits[1] ); // Orange
+alert( fruits[2] ); // Plum
+##      We can replace an element:
+
+fruits[2] = 'Pear'; // now ["Apple", "Orange", "Pear"]
+…Or add a new one to the array:
+
+fruits[3] = 'Lemon'; // now ["Apple", "Orange", "Pear", "Lemon"]
+The total count of the elements in the array is its length:
+
+let fruits = ["Apple", "Orange", "Plum"];
+
+alert( fruits.length ); // 3
+We can also use alert to show the whole array.
+
+let fruits = ["Apple", "Orange", "Plum"];
+
+alert( fruits ); // Apple,Orange,Plum
+##      An array can store elements of any type.
+
+For instance:
+
+// mix of values
+let arr = [ 'Apple', { name: 'John' }, true, function() { alert('hello'); } ];
+
+// get the object at index 1 and then show its name
+alert( arr[1].name ); // John
+
+// get the function at index 3 and run it
+arr[3](); // hello
+
+##        Trailing comma
+An array, just like an object, may end with a comma:
+
+let fruits = [
+  "Apple",
+  "Orange",
+  "Plum",
+];
+The “trailing comma” style makes it easier to insert/remove items, 
+because all lines become alike.
+
+##        Get last elements with “at”
+
+let fruits = ["Apple", "Orange", "Plum"];
+alert( fruits[fruits.length-1] ); // Plum (old fashioned way)
+alert( fruits.at(-1) ); // Plum   (Modern way)
+
+
+## -----------  Stack and queue -------------##
+A stack is usually illustrated as a pack of cards: new cards are added to the top or 
+taken from the top:
+
+For stacks, the latest pushed item is received first, 
+that’s also called LIFO (Last-In-First-Out) principle. 
+For queues, we have FIFO (First-In-First-Out).
+
+Arrays in JavaScript can work both as a queue and as a stack. 
+They allow you to add/remove elements both to/from the beginning or the end.
+In computer science the data structure that allows this, is called deque.
+
+## -----------Push / pop Arrays -------------##
+##        Methods that work with the end of the array:
+
+pop takes an element from the end.
+push adds an element to the end.
+
+
+##        pop
+Extracts the last element of the array and returns it:
+Example:
+let fruits = ["Apple", "Orange", "Pear"];
+alert( fruits.pop() ); // remove "Pear" and alert it
+alert( fruits ); // Apple, Orange
+Note: Both fruits.pop() and fruits.at(-1) return the last element of the array, 
+but fruits.pop() also modifies the array by removing it.
+
+
+##        push
+Append the element to the end of the array:
+let fruits = ["Apple", "Orange"];
+fruits.push("Pear");
+alert( fruits ); // Apple, Orange, Pear
+The call fruits.push(...) is equal to fruits[fruits.length] = ....
+
+Pushing items on empty array:
+let myStack = [];
+myStack.push(1);
+myStack.push(2);
+myStack.push(3);
+console.log(myStack);  // 1,2,3
+
+After pushing variables to the array, we can then pop variables off from the end.
+
+console.log(myStack.pop());
+console.log(myStack);
+This will print out the variable we popped from the array, 
+and what's left of the array:
+3           // the result from myStack.pop()
+1,2         // what myStack contains now
+
+## -----------Push / pop Arrays -------------##
+
+## -----------Shift / unshift -------------##
+##        Methods that work with the beginning of the array:
+
+##      shift
+Extracts the first element of the array and returns it:
+
+let fruits = ["Apple", "Orange", "Pear"];
+alert( fruits.shift() ); // remove Apple and alert it
+
+alert( fruits ); // Orange, Pear
+
+##      unshift
+Add the element to the beginning of the array:
+
+let fruits = ["Orange", "Pear"];
+fruits.unshift('Apple');
+alert( fruits ); // Apple, Orange, Pear
+
+
+##      Methods push and unshift can add multiple elements at once:
+let fruits = ["Apple"];
+
+fruits.push("Orange", "Peach");
+fruits.unshift("Pineapple", "Lemon");
+// ["Pineapple", "Lemon", "Apple", "Orange", "Peach"]
+alert( fruits );
+
+
+console.log(myQueue.shift());
+The shift keyword will remove 
+the variables of the array in the exact order they were inserted in
+
+The unshift method is used to insert a variable at the beginning of an array. 
+For example:
+
+let myArray = [1,2,3];
+myArray.unshift(0);
+console.log(myArray);       // will print out 0,1,2,3
+
+## -----------Shift / unshift -------------##
+## -----------  for ... of loop (for arrays)  -------------##
+
+let fruits = ["Apple", "Orange", "Plum"];
+
+// iterates over array elements
+for (let fruit of fruits) {
+  alert( fruit ); // shows each fruit one by one
+}
+
+
+for (variable of iterable) {
+  // statement block to be repeated
+}
+Here, iterable can be a couple of things, but most of the time it is just an array variable. 
+Let's again look at an example.
+
+const months = [
+  Jan to Dec
+];
+
+for (const month of months) {
+  console.log(month);
+}
+With this for loop variant, the array is considered a collection of elements 
+(you can iterate through a collection: it is 'iterable'). 
+Each time the loop body is executed the loop variable receives the next value of the 
+array (in the example, starting with 'January' and ending with 'December').
+
+This now allows us to write very elegant and short code. 
+No need to mess around with a loop index variable, array lengths etc. 
+If you need to use a for loop involving arrays, this will often be your first choice.
+
+
+
+## -----------  Array.forEach()  -------------##
+The arr.forEach method allows to run a function for every element of the array.
+
+Syntax:
+
+arr.forEach(function(item, index, array) {
+  // ... do something with item
+});
+
+The forEach() method executes a provided function once for each array element.
+Example:
+const numbers = [1, 2, 3, 4];
+let sum = 0;
+
+numbers.forEach(x => {
+  sum += x;
+});
+
+console.log(sum); // -> 10
+
+
+## -----------  Splicing  -------------##
+
+
+let myArray = [0,1,2,3,4,5,6,7,8,9];
+let splice = myArray.splice(3,5);
+
+console.log(splice);        // will print out 3,4,5,6,7
+console.log(myArray);       // will print out 0,1,2,8,9
+
+## -----------  Splicing  -------------##
+## -----------  Length of Array  -------------##
+The length property automatically updates when we modify the array. 
+To be precise, it is actually not the count of values in the array, 
+but the greatest numeric index plus one.
+
+For instance, a single element with a large index gives a big length:
+
+let fruits = [];
+fruits[123] = "Apple";
+alert( fruits.length ); // 124
+
+Note: We usually don’t use arrays like that.
+Another interesting thing about the length property is that it’s writable.
+
+If we increase it manually, nothing interesting happens. 
+But if we decrease it, the array is truncated. 
+The process is irreversible, here’s the example:
+
+let arr = [1, 2, 3, 4, 5];
+arr.length = 2; // truncate to 2 elements
+alert( arr ); // [1, 2]
+arr.length = 5; // return length back
+alert( arr[3] ); // undefined: the values do not return
+
+So, the simplest way to clear the array is: arr.length = 0;
+
+
+
+
+
 
 
 
@@ -832,30 +1042,6 @@ for (i = 0; i < 3; i++) { // use an existing variable
 alert(i); // 3, visible, because declared outside of the loop
 
 
-## -----------  for ... of loop (for arrays)  -------------##
-
-
-for (variable of iterable) {
-  // statement block to be repeated
-}
-Here, iterable can be a couple of things, but most of the time it is just an array variable. 
-Let's again look at an example.
-
-const months = [
-  Jan to Dec
-];
-
-for (const month of months) {
-  console.log(month);
-}
-With this for loop variant, the array is considered a collection of elements 
-(you can iterate through a collection: it is 'iterable'). 
-Each time the loop body is executed the loop variable receives the next value of the 
-array (in the example, starting with 'January' and ending with 'December').
-
-This now allows us to write very elegant and short code. 
-No need to mess around with a loop index variable, array lengths etc. 
-If you need to use a for loop involving arrays, this will often be your first choice.
 
 ## -----------  for ... in loop (for objects)  -------------##
 
@@ -879,8 +1065,6 @@ for (const key in obj) {
 for (const key of Object.keys(obj)) {
   console.log(obj[key]);
 }
-
-
 
 ## -----------  Skipping parts  -------------##
          
