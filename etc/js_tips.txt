@@ -1,9 +1,182 @@
 
+## -----------Push / pop Arrays -------------##
+
+let myStack = [];
+myStack.push(1);
+myStack.push(2);
+myStack.push(3);
+console.log(myStack);  // 1,2,3
+
+After pushing variables to the array, we can then pop variables off from the end.
+
+console.log(myStack.pop());
+console.log(myStack);
+This will print out the variable we popped from the array, 
+and what's left of the array:
+3           // the result from myStack.pop()
+1,2         // what myStack contains now
+
+## -----------Push / pop Arrays -------------##
+
+
+## -----------Shift / unshift -------------##
+
+console.log(myQueue.shift());
+The shift keyword will remove 
+the variables of the array in the exact order they were inserted in
+
+The unshift method is used to insert a variable at the beginning of an array. 
+For example:
+
+let myArray = [1,2,3];
+myArray.unshift(0);
+console.log(myArray);       // will print out 0,1,2,3
+
+## -----------Shift / unshift -------------##
+
+
+## -----------  Splicing  -------------##
+
+
+let myArray = [0,1,2,3,4,5,6,7,8,9];
+let splice = myArray.splice(3,5);
+
+console.log(splice);        // will print out 3,4,5,6,7
+console.log(myArray);       // will print out 0,1,2,8,9
+
+## -----------  Splicing  -------------##
+
+
+## -----------  Random Maths in JS  -------------##
+JavaScript also has a Math module which contains more advanced functions:
+
+Math.abs calculates the absolute value of a number
+Math.exp calculates e to the power of a number
+Math.pow(x,y) calculates the result of x to the power of y
+Math.floor removes the fraction part from a number
+Math.random() will give a random number x where 0<=x<1
+
+## -----------  Random Maths in JS  -------------##
+
+## -----------  Array and For loop  -------------##
+To iterate over an array and print out all of its members, we usually use the 
+for statement. Here's an example:
+
+let myArray = ["A", "B", "C"];
+for (let i = 0; i < myArray.length; i++)
+{
+    console.log("The member of myArray in index " + i + " is " + myArray[i]);
+}
+This prints out the contents of the array:
+The member of myArray in index 0 is A
+The member of myArray in index 1 is B
+The member of myArray in index 2 is C
+## -----------  Array and For loop  -------------##
+
+## -----------  While loop  -------------##
+
+let i = 99;
+while (i > 0)
+{
+    console.log(i + " bottles of beer on the wall");
+    i -= 1;
+}
+
+## -----------  While loop  -------------##
+
+
+## -----------  Break and Continue  -------------##
+
+break and continue statements
+The break statement allows to stop the execution of a loop. 
+For example, we can create a loop that loops forever using while(true) 
+and use the break statement to break inside the loop instead by checking 
+that a certain condition was met.
+
+let i = 99;
+while (true)
+{
+    console.log(i + " bottles of beer on the wall");
+    i -= 1;
+    if (i == 0)
+    {
+        break;
+    }
+}
+
+The "continue" statement skips the rest of the loop and jumps back to the beginning 
+of the loop. For example, if we would want to print only odd numbers using a for 
+statement, we can do the following:
+
+for (let i = 0; i < 100; i++)
+{
+    // check that the number is even
+    if (i % 2 == 0)
+    {
+         continue;
+    }
+    // if we got here, then i is odd.
+    console.log(i + " is an odd number.");
+}
+## -----------  Break and Continue  -------------##
+
+## -----------  Objects  -------------##
+
+To initialize an object, use curly braces:
+
+let emptyObject = {};
+let personObject = {
+    firstName : "John",
+    lastName : "Smith"
+}
+Member addressing
+Members of objects can be addressed using the brackets operator [], 
+like arrays, but just like many other object oriented languages, 
+the period . operator can also be used. 
+They are very similar, except for the fact that brackets return a member 
+by using a string, in contrast to the period operator, 
+which requires the member to be a simple word 
+(the word should not contain spaces, start with a number or use illegal characters).
+
+For example, we can continue to fill the person object with more details:
+
+let personObject = {
+    firstName : "John",
+    lastName : "Smith"
+}
+personObject.age = 23;
+personObject["salary"] = 14000;
+
+## -----------  Objects  -------------##
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ----------------------   Js Fundamentals   From JsInfo  -------------------------   
 
 
 
-## Data types: 
+## -----------  Data types  -------------##
+
 var can have different data types. 
 1.      number - besides regular numbers and arithmetic operations, other "special numerical values" 
 also exist" like Infinity, -infinity and NaN
@@ -80,14 +253,13 @@ typeof null // "object"  (2)
 typeof alert // "function" 
 
 
-## Interaction
+## -----------  Interaction  -------------##
+
 (alert , prompt, confirm)
 
 alert
 shows a message.
 alert("Hello");
-
-
 
 prompt
 shows a message asking the user to input text. It returns the text or, if Cancel button or Esc is clicked, null.
@@ -97,7 +269,6 @@ example:
 let age = prompt('How old are you?', 100);
 alert(`You are ${age} years old!`); // You are 100 years old!
 
-
 confirm
 shows a message and waits for the user to press “OK” or “Cancel”. It returns true for OK and false for Cancel/Esc.
 syntax: result = confirm(question);
@@ -106,22 +277,21 @@ example:
 let isBoss = confirm("Are you the boss?");
 alert( isBoss ); // true if OK is pressed
 
-
 All these methods are modal: they pause script execution and don’t allow the visitor to interact with the rest of the page until the window has been dismissed.
 There are two limitations shared by all the methods above:
 The exact location of the modal window is determined by the browser. Usually, it’s in the center.
 The exact look of the window also depends on the browser. We can’t modify it.
 
-##Type COnversions
+## -----------  Type COnversions  -------------##
 
-###String Conversions
+##      String Conversions
 let value = true;
 alert(typeof value); // boolean
 
 value = String(value); // now value is converted to a string "true"
 alert(typeof value); // string
 
-###Number conversions
+##    Number conversions
 1.    let num = Number(str); // converted to number 123
       alert(typeof num); // number
 
@@ -132,7 +302,7 @@ alert( Number("123z") );      // NaN (error reading a number at "z")
 alert( Number(true) );        // 1
 alert( Number(false) );       // 0
 
-###Boolean conversions
+##    Boolean conversions
 Boolean(value)
 
 Values that are intuitively “empty”, like 0, an empty string, null, undefined, and NaN, become false.
@@ -144,7 +314,7 @@ alert( Boolean("hello") ); // true
 alert( Boolean("") ); // false
 
 
-##Maths
+## -----------  Maths  -------------##
 
 Remainder %
 alert( 5 % 2 ); // 1, a remainder of 5 divided by 2
@@ -165,7 +335,10 @@ For example, a square root is an exponentiation by ½:
 alert( 4 ** (1/2) ); // 2 (power of 1/2 is the same as a square root)
 alert( 8 ** (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
 
-###   String concatenation with binary +
+## -----------  Maths  -------------##
+
+## -----------  String concatenation with binary +  -------------##
+
 Usually, the plus operator + sums numbers. But, if the binary + is applied to strings, it merges (concatenates) them:
 
 let s = "my" + "string";
@@ -192,7 +365,9 @@ Here’s the demo for subtraction and division:
 alert( 6 - '2' ); // 4, converts '2' to a number
 alert( '6' / '2' ); // 3, converts both operands to numbers
 
-###   Numeric conversion, unary +
+
+## -----------  Numeric conversion, unary +  -------------##
+
 applied to a single value, doesn’t do anything to numbers. But if the operand is not a number, the unary plus converts it into a number.
 For example:
 
@@ -227,7 +402,9 @@ alert( +apples + +oranges ); // 5
 // the longer variant
 // alert( Number(apples) + Number(oranges) ); // 5
 
-## Assignment (=)
+## -----------  Numeric conversion, unary +  -------------##
+## -----------  Assignment (=)  -------------##
+
 ###   Chaining assignments
 Another interesting feature is the ability to chain assignments:
 
@@ -247,7 +424,8 @@ c = 2 + 2;
 b = c;
 a = c;
 
-###   Modify-in-place
+## -----------  Modify-in-place  -------------##
+
 We often need to apply an operator to a variable and store the new result in that same variable.
 
 For example:
@@ -268,7 +446,8 @@ let n = 2;
 n *= 3 + 5;
 alert( n ); // 16  (right part evaluated first, same as n *= 8)
 
-###   Increment/decrement
+## -----------  Increment/decrement  -------------##
+
 Increasing or decreasing a number by one is among the most common numerical operations.
 
 So, there are special operators for it:
@@ -342,8 +521,12 @@ counter++;
 Bitwise operators and Comma 
 Rare, so no details yet
 
+## -----------  Conditional branching: if, '?'  -------------##
 
-##    Conditional branching: if, '?'
+syntax: 
+if (/* this is the case */) {
+  // then this will happen
+}
 let year = prompt('In which year was ECMAScript-2015 specification published?', '');
 if (year == 2015) alert( 'You are right!' );
 
@@ -356,7 +539,9 @@ if (year == 2015) {
 We recommend wrapping your code block with curly braces {} every time you use an if statement, 
 even if there is only one statement to execute. Doing so improves readability.
 
-## If else example
+## -----------  If else example  -------------##
+
+
 let year = prompt(
         "In which year was the ECMAScript-2015 specification published?",
         ""
@@ -368,7 +553,8 @@ let year = prompt(
         alert("How can you be so wrong?"); // any value except 2015
       }
 
-## else if example
+
+## -----------  else if example  -------------##
 
 let year = prompt('In which year was the ECMAScript-2015 specification published?', '');
 
@@ -380,7 +566,7 @@ if (year < 2015) {
   alert( 'Exactly!' );
 }
 
-##    Conditional operator ‘?’
+## -----------  Conditional operator ‘?’ “the ternary way”  -------------##
 Sometimes, we need to assign a variable depending on a condition.
 For instance:
 
@@ -416,7 +602,8 @@ In the example above, you can avoid using the question mark operator because the
 let accessAllowed = age > 18;
 
 
-Multiple ‘?’
+## -----------  Multiple ‘?’ Conditional operators  -------------##
+
 A sequence of question mark operators ? can return a value that depends on more than one condition.
 For instance:
 let age = prompt('age?', 18);
@@ -453,7 +640,7 @@ if (company == 'Netscape') {
   alert('Wrong.');
 }
 
-TEST / EXAM
+## -----------  TEST / EXAM  -------------##
 
 ##    Using the if..else construct, write the code which asks:
  ‘What is the “official” name of JavaScript?’
@@ -563,15 +750,17 @@ let user = prompt("who's there?", "");
       }
 
 
-##    Nullish coalescing operator '??'
+## -----------  Nullish coalescing operator '??'  -------------##
+    
 The nullish coalescing operator ?? provides a short way to choose the first “defined” value from a list.
 It’s used to assign default values to variables:
 // set height=100, if height is null or undefined
 height = height ?? 100;
 
-##    Loops: while and for
+## -----------  Loops: while and for  -------------##
 Loops are a way to repeat the same code multiple times.
-###       The “while” loop
+
+## -----------  The “while” loop  -------------##
 The while loop has the following syntax:
 
 while (condition) {
@@ -597,7 +786,8 @@ while (i) { // when i becomes 0, the condition becomes falsy, and the loop stops
   i--;
 }
 
-###       The “do…while” loop
+## -----------  The “do…while” loop  -------------##
+
 The condition check can be moved below the loop body using the do..while syntax:
 
 do {
@@ -616,7 +806,7 @@ This form of syntax should only be used when you want the body of the loop to
  execute at least once regardless of the condition being truthy. 
  Usually, the other form is preferred: while(…) {…}.
 
-###     The “for” loop
+## -----------  The “for” loop  -------------##
 The for loop is more complex, but it’s also the most commonly used loop.
 It looks like this:
 
@@ -641,7 +831,59 @@ for (i = 0; i < 3; i++) { // use an existing variable
 }
 alert(i); // 3, visible, because declared outside of the loop
 
-###         Skipping parts
+
+## -----------  for ... of loop (for arrays)  -------------##
+
+
+for (variable of iterable) {
+  // statement block to be repeated
+}
+Here, iterable can be a couple of things, but most of the time it is just an array variable. 
+Let's again look at an example.
+
+const months = [
+  Jan to Dec
+];
+
+for (const month of months) {
+  console.log(month);
+}
+With this for loop variant, the array is considered a collection of elements 
+(you can iterate through a collection: it is 'iterable'). 
+Each time the loop body is executed the loop variable receives the next value of the 
+array (in the example, starting with 'January' and ending with 'December').
+
+This now allows us to write very elegant and short code. 
+No need to mess around with a loop index variable, array lengths etc. 
+If you need to use a for loop involving arrays, this will often be your first choice.
+
+## -----------  for ... in loop (for objects)  -------------##
+
+This loop variant is for use with JavaScript objects only. 
+It existed before the for...of loop variant became available.
+We will discuss the for...in variant in more detail the part of the curriculum 
+where we deal with Objects. Here, we will suffice to say that the for...in loop 
+construct can easily be rewritten as a for...of loop, as follows:
+
+const obj = {
+  a: 10,
+  b: 'test',
+};
+
+// for...in
+for (const key in obj) {
+  console.log(obj[key]);
+}
+
+// equivalent for...of
+for (const key of Object.keys(obj)) {
+  console.log(obj[key]);
+}
+
+
+
+## -----------  Skipping parts  -------------##
+         
 Any part of for can be skipped.
 For example, we can omit begin if we don’t need to do anything at the loop start.
 Like here:
@@ -663,7 +905,8 @@ Please note that the two for semicolons ; must be present.
 Otherwise, there would be a syntax error.
 
 
-###       Breaking the loop
+## -----------  Breaking the loop  -------------##
+
 Normally, a loop exits when its condition becomes falsy.
 But we can force the exit at any time using the special break directive.
 For example, the loop below asks the user for a series of numbers,
@@ -685,7 +928,9 @@ The combination “infinite loop + break as needed” is great for situations
 when a loop’s condition must be checked not in the beginning or end of the loop,
 but in the middle or even in several places of its body.
 
-###         Continue to the next iteration
+
+## -----------  Continue to the next iteration  -------------##
+
 The continue directive is a “lighter version” of break. 
 It doesn’t stop the whole loop.
 Instead, it stops the current iteration and forces the loop to start a new one
@@ -704,7 +949,8 @@ For even values of i, the continue directive stops executing the body and passes
 control to the next iteration of for (with the next number). 
 So the alert is only called for odd values.
 
-###       Labels for break/continue
+## -----------  Labels for break/continue  -------------##
+
 Sometimes we need to break out from multiple nested loops at once.
 For example, in the code below we loop over i and j, prompting for the coordinates
  (i, j) from (0,0) to (2,2):
@@ -743,7 +989,7 @@ So the control goes straight from (*) to alert('Done!').
 
 
 
-## TESTS
+## -----------  TESTS  -------------##
 ###   Question
       Output even numbers in the loop
       Use the for loop to output even numbers from 2 to 10.
@@ -808,7 +1054,7 @@ for (let i = 2; i <= n; i++) { // for each i...
 }
 
 
-##          The "switch" statement
+## -----------  The "switch" statement  -------------##
 A switch statement can replace multiple if checks.
 It gives a more descriptive way to compare a value with multiple variants.
 
@@ -952,7 +1198,8 @@ strictly equal === to the number 3. So we’ve got a dead code in case 3!
 The default variant will execute.
 
 
-##          Question
+## -----------  Question  -------------##
+
       Write the code using if..else which would correspond to the following switch:
 
       switch (browser) {
