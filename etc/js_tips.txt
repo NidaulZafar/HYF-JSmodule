@@ -12,20 +12,7 @@ Math.random() will give a random number x where 0<=x<1
 
 ## -----------  Random Maths in JS  -------------##
 
-## -----------  Array and For loop  -------------##
-To iterate over an array and print out all of its members, we usually use the 
-for statement. Here's an example:
 
-let myArray = ["A", "B", "C"];
-for (let i = 0; i < myArray.length; i++)
-{
-    console.log("The member of myArray in index " + i + " is " + myArray[i]);
-}
-This prints out the contents of the array:
-The member of myArray in index 0 is A
-The member of myArray in index 1 is B
-The member of myArray in index 2 is C
-## -----------  Array and For loop  -------------##
 
 ## -----------  While loop  -------------##
 
@@ -316,6 +303,21 @@ numbers.forEach(x => {
 });
 
 console.log(sum); // -> 10
+
+## -----------  Array and For loop  -------------##
+To iterate over an array and print out all of its members, we usually use the 
+for statement. Here's an example:
+
+let myArray = ["A", "B", "C"];
+for (let i = 0; i < myArray.length; i++)
+{
+    console.log("The member of myArray in index " + i + " is " + myArray[i]);
+}
+This prints out the contents of the array:
+The member of myArray in index 0 is A
+The member of myArray in index 1 is B
+The member of myArray in index 2 is C
+## -----------  Array and For loop  -------------##
 
 
 ## -----------  Splicing  -------------##
