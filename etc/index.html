@@ -359,6 +359,384 @@
       //   main();
       // }
       // module.exports = giveCompliment;
+
+      // Exercise 2
+
+      // function calculateDogAge(age) {
+      //   // TODO complete this function
+      //   dogAge = age * 7;
+      //   return `Your doggie is ${dogAge} years old in dog years!`;
+      // }
+
+      // function main() {
+      //   console.log(calculateDogAge(1)); // -> "Your doggie is 7 years old in dog years!"
+      //   console.log(calculateDogAge(2)); // -> "Your doggie is 14 years old in dog years!"
+      //   console.log(calculateDogAge(3)); // -> "Your doggie is 21 years old in dog years!"
+      // }
+
+      // Exercise 3
+
+      // function main() {
+      // const numKids = [
+      //   2,
+      //   3,
+      //   4,
+      //   5,
+      //   10, // TODO add elements here
+      // ];
+
+      // const partnerNames = [
+      //   "hot girl", // TODO add elements here
+      //   "beautiful spouse", // TODO add elements here
+      //   "sweet girl", // TODO add elements here
+      //   "loving wife", // TODO add elements here
+      //   "kind wife", // TODO add elements here
+      // ];
+
+      // const locations = [
+      //   "Almere", // TODO add elements here
+      //   "Amsterdam", // TODO add elements here
+      //   "Hamburg", // TODO add elements here
+      //   "Groningen", // TODO add elements here
+      //   "Harderwijk", // TODO add elements here
+      // ];
+
+      // const jobTitles = [
+      //   "web developer",
+      //   "full stack developer",
+      //   "web engineer",
+      //   "senior trainer",
+      //   "back-end developer",
+      //   // TODO add elements here
+      // ];
+
+      // function selectRandomly(arr) {
+      //   let randomProperty = [Math.floor(Math.random() * 5)];
+      //   return arr[randomProperty]; // TODO complete this function
+      // }
+
+      // function tellFortune(/* TODO add parameter(s) here */) {
+      //   // TODO complete this function
+
+      //   return `You will be a ${selectRandomly(jobTitles)} in ${selectRandomly(
+      //     locations
+      //   )}, married to a ${selectRandomly(partnerNames)} with ${selectRandomly(
+      //     numKids
+      //   )} kids.`;
+      // }
+
+      // console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+      // console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+      // console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+
+      // ! Do not change or remove the code below
+      // if (process.env.NODE_ENV !== "test") {
+      //   main();
+      // }
+      // module.exports = tellFortune;
+
+      // Ex. 4
+      // "use strict";
+      // /*------------------------------------------------------------------------------
+      // Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-4-shopping-at-the-supermarket
+
+      // Let's do some grocery shopping! We're going to get some things to cook dinner
+      // with. However, you like to spend money and always buy too many things. So when
+      // you have more than 3 items in your shopping cart the first item gets taken out.
+
+      // 1. Create an array called `shoppingCart` that holds the following strings:
+      //    "bananas" and "milk".
+
+      // 2. Complete the function named `addToShoppingCart` as follows:
+
+      //    - It should take one argument: a grocery item (string)
+      //    - It should add the grocery item to `shoppingCart`. If the number of items is
+      //      more than three remove the first one in the array.
+      //    - It should return a string "You bought <list-of-items>!", where
+      //      <list-of-items>is a comma-separated list of items from the shopping cart
+      //      array.
+
+      // 3. Confirm that your code passes the unit tests.
+      // -----------------------------------------------------------------------------*/
+      // const shoppingCart = ["bananas", "milk"];
+
+      // // ! Function to be tested
+
+      // function addToShoppingCart(item) {
+      //   if (item) {
+      //     shoppingCart.push(item);
+      //   }
+      //   if (shoppingCart.length > 3) {
+      //     shoppingCart.shift();
+      //   }
+      //   const returnString = `You bought ${shoppingCart.join(", ")}!`;
+      //   return returnString;
+      //   // TODO complete this function
+      // }
+      // console.log(addToShoppingCart());
+      // // ! Test functions (plain vanilla JavaScript)
+      // function test1() {
+      //   console.log(
+      //     "Test 1: addShoppingCart() called without an argument should leave the shopping cart unchanged"
+      //   );
+      //   const expected = "You bought bananas, milk!";
+      //   const actual = addToShoppingCart();
+      //   console.assert(actual === expected);
+      // }
+
+      // function test2() {
+      //   console.log("Test 2: addShoppingCart() should take one parameter");
+      //   const expected = 1;
+      //   const actual = addToShoppingCart.length;
+      //   console.assert(actual === expected);
+      // }
+
+      // function test3() {
+      //   console.log("Test 3: `chocolate` should be added");
+      //   const expected = "You bought bananas, milk, chocolate!";
+      //   const actual = addToShoppingCart("chocolate");
+      //   console.assert(actual === expected);
+      // }
+
+      // function test4() {
+      //   console.log("Test 4: `waffles` should be added and `bananas` removed");
+      //   const expected = "You bought milk, chocolate, waffles!";
+      //   const actual = addToShoppingCart("waffles");
+      //   console.assert(actual === expected);
+      //   console.log(addToShoppingCart());
+      // }
+
+      // function test5() {
+      //   console.log("Test 5: `tea` should be added and `milk` removed");
+      //   const expected = "You bought chocolate, waffles, tea!";
+      //   const actual = addToShoppingCart("tea");
+      //   console.assert(actual === expected);
+      // }
+
+      // function test() {
+      //   test1();
+      //   test2();
+      //   test3();
+      //   test4();
+      //   test5();
+      // }
+
+      // test();
+
+      //       "use strict";
+      //       /*------------------------------------------------------------------------------
+      // Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-5-improved-shopping-at-the-supermarket
+
+      // In the current exercise we will rewrite the `addToShoppingCart` function to make
+      // it pure. Do the following:
+
+      // 1. Complete the parameter list of `addToShopping()`. As a first parameter it
+      //    should accept a shopping cart array and as a second parameter it should
+      //    accept a grocery item to be added.
+      // 2. The function should return a new shopping cart array, following the same rule
+      //    as in the previous exercise: it should contain a maximum of three items.
+      // 3. The shopping cart passed as an argument should not be mutated.
+      // 4. When constructing the new shopping cart array you should make use of the ES5
+      //    spread syntax.
+      // 5. Confirm that you function passes the provided unit tests.
+      // ------------------------------------------------------------------------------*/
+      //       // ! Function under test
+      //       function addToShoppingCart(shoppingCart, item) {
+      //         let secondShoppingCart = [...shoppingCart, item];
+      //         if (secondShoppingCart.length > 3) {
+      //           secondShoppingCart = secondShoppingCart.slice(-3);
+      //           return secondShoppingCart;
+      //         } else {
+      //           return secondShoppingCart;
+      //         }
+      //         // TODO complete this function
+      //       }
+      //       // ! Test functions (plain vanilla JavaScript)
+      //       function test1() {
+      //         console.log("Test 1: addToShoppingCart should take two parameters");
+      //         console.assert(addToShoppingCart.length === 2);
+      //       }
+
+      //       function test2() {
+      //         console.log("Test 2: addToShoppingCart should be a pure function");
+      //         // A pure function should return the same result when called with
+      //         // identical arguments. It should also no side effects (not tested here).
+      //         const initialCart = ["bananas", "milk"];
+      //         const result1 = addToShoppingCart(initialCart, "chocolate");
+      //         const result2 = addToShoppingCart(initialCart, "chocolate");
+      //         console.assert(JSON.stringify(result1) === JSON.stringify(result2));
+      //       }
+
+      //       function test3() {
+      //         console.log("Test 3: `chocolate` should be added");
+      //         const initialCart = ["bananas", "milk"];
+      //         const result = addToShoppingCart(initialCart, "chocolate");
+      //         console.assert(result.length === 3);
+      //         console.assert(result.includes("chocolate"));
+      //       }
+
+      //       function test4() {
+      //         console.log("Test 4: `waffles` should be added");
+      //         const initialCart = ["bananas", "milk", "chocolate"];
+      //         const result = addToShoppingCart(initialCart, "waffles");
+      //         console.assert(result.length === 3);
+      //         console.assert(result.includes("waffles"));
+      //       }
+
+      //       function test() {
+      //         test1();
+      //         test2();
+      //         test3();
+      //         test4();
+      //       }
+
+      //       test();
+      //       "use strict";
+      //       /*------------------------------------------------------------------------------
+      // Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-6-total-cost-is
+
+      // You want to buy a couple of things from the supermarket to prepare for a party.
+      // After scanning all the items the cashier wants to give you the total price, but
+      // the machine is broken! Let's write her a function that does it for her
+      // instead!
+
+      // 1. Create an object named `cartForParty` with five properties. Each property
+      //    should be a grocery item (like `beers` or `chips`) and hold a number value
+      //    (like `1.75` or `0.99`).
+
+      // 2. Complete the function called `calculateTotalPrice`.
+
+      //    - It takes one parameter: an object that contains properties that only contain
+      //      number values.
+      //    - Loop through the object and add all the number values together.
+      //    - Return a string: "Total: €`amount`".
+
+      // 3. Complete the unit test functions and verify that all is working as expected.
+      // -----------------------------------------------------------------------------*/
+      //       const cartForParty = {
+      //         chips: 7,
+      //         pepsi: 8.5,
+      //         chocolates: 11,
+      //         cake: 13.9,
+      //         cookies: 6.75,
+      //         // TODO complete this object
+      //       };
+
+      //       function calculateTotalPrice(cartForParty) {
+      //         let sum = 0;
+      //         for (let key in cartForParty) {
+      //           sum += cartForParty[key];
+      //         }
+      //         return `Total: €${sum}`; // TODO replace this comment with your code
+      //       }
+
+      //       // ! Test functions (plain vanilla JavaScript)
+      //       function test1() {
+      //         console.log("\nTest 1: calculateTotalPrice should take one parameter");
+      //         console.assert(calculateTotalPrice.length === 1);
+      //         // TODO replace this comment with your code
+      //       }
+
+      //       function test2() {
+      //         console.log("\nTest 2: return correct output when passed cartForParty");
+      //         let result = calculateTotalPrice(cartForParty);
+      //         const actual = calculateTotalPrice(cartForParty);
+      //         const expected = "Total: €47.15";
+      //         console.assert(actual === expected);
+      //         console.log(result);
+      //         // TODO replace this comment with your code
+      //       }
+
+      //       function test() {
+      //         test1();
+      //         test2();
+      //       }
+
+      //       test();
+
+      "use strict";
+      /*------------------------------------------------------------------------------
+      Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-7-mind-the-privacy
+
+      1. Complete the `filterPrivateData()` function. It should take a single
+         parameter: the array of employee records.
+      2. It should create a _new_ array, containing employee data without the private
+         data.
+      3. Use object destructuring to extract the non-private properties from an
+         employee record (an `object`) and object literal shorthand to create a new
+         employee record with just the non-private parts (name, occupation and email).
+      4. Return the new array as the return value of the function.
+      5. Run the exercise and verify that it passes all the unit tests.
+      ------------------------------------------------------------------------------*/
+      // const employeeRecords = [
+      //   {
+      //     name: "John",
+      //     occupation: "developer",
+      //     gender: "M",
+      //     email: "john.doe@somewhere.net",
+      //     salary: 50000,
+      //   },
+      //   {
+      //     name: "Jane",
+      //     occupation: "manager",
+      //     gender: "F",
+      //     email: "jane.eyre@somewhere.net",
+      //     salary: 60000,
+      //   },
+      // ];
+
+      // // // ! Function under test
+      // function filterPrivateData(employeeRecords) {
+      //   const filteredRecords = employeeRecords.map((element) => {
+      //     let { gender, salary, ...rest } = element;
+      //     return rest;
+      //   });
+      //   return filteredRecords;
+      // }
+      // // ! Test functions (plain vanilla JavaScript)
+      // function test1() {
+      //   console.log("Test 1: filterPrivateData should take one parameters");
+      //   console.assert(filterPrivateData.length === 1);
+      // }
+
+      // function test2() {
+      //   console.log("Test 2: gender and salary should be filtered out");
+      //   const expected = [
+      //     {
+      //       name: "John",
+      //       occupation: "developer",
+      //       email: "john.doe@somewhere.net",
+      //     },
+      //     {
+      //       name: "Jane",
+      //       occupation: "manager",
+      //       email: "jane.eyre@somewhere.net",
+      //     },
+      //   ];
+      //   const result = filterPrivateData(employeeRecords);
+      //   console.assert(JSON.stringify(result) === JSON.stringify(expected));
+      // }
+
+      // function test() {
+      //   test1();
+      //   test2();
+      // }
+
+      // test();
+
+      let array1 = [
+        ["a", "b", 3, 5, "Beyza"],
+        [true, false, 7, 8.5],
+        [6, 8, "text", 2, 5, "Amer"],
+      ];
+
+      for (let i = 0; i < array1.length; i++) {
+        const onlyNumbers = array1[i].filter(
+          (element) => typeof element === "number"
+        );
+
+        console.log(onlyNumbers);
+      }
     </script>
   </body>
 </html>
