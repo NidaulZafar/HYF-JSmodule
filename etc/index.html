@@ -656,18 +656,18 @@
 
       "use strict";
       /*------------------------------------------------------------------------------
-      Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-7-mind-the-privacy
+            Full description at: https://github.com/HackYourFuture/Homework/tree/main/1-JavaScript/Week3#exercise-7-mind-the-privacy
 
-      1. Complete the `filterPrivateData()` function. It should take a single
-         parameter: the array of employee records.
-      2. It should create a _new_ array, containing employee data without the private
-         data.
-      3. Use object destructuring to extract the non-private properties from an
-         employee record (an `object`) and object literal shorthand to create a new
-         employee record with just the non-private parts (name, occupation and email).
-      4. Return the new array as the return value of the function.
-      5. Run the exercise and verify that it passes all the unit tests.
-      ------------------------------------------------------------------------------*/
+            1. Complete the `filterPrivateData()` function. It should take a single
+               parameter: the array of employee records.
+            2. It should create a _new_ array, containing employee data without the private
+               data.
+            3. Use object destructuring to extract the non-private properties from an
+               employee record (an `object`) and object literal shorthand to create a new
+               employee record with just the non-private parts (name, occupation and email).
+            4. Return the new array as the return value of the function.
+            5. Run the exercise and verify that it passes all the unit tests.
+            ------------------------------------------------------------------------------*/
       // const employeeRecords = [
       //   {
       //     name: "John",
@@ -737,22 +737,62 @@
 
       //   console.log(onlyNumbers);
       // }
-      function calculateDogAge(number) {
-        let dogAge = number * 7;
-        return `Your doggie is ${dogAge} years old in dog years!`;
-      }
+      // ------------------- CONFUSION ------------------
+      //       function selectRandomly(arr) {
+      //         let randomProperty = [Math.floor(Math.random() * arr.length)];
+      //         return arr[randomProperty]; // TODO complete this function
+      //       }
 
-      function main() {
-        console.log(calculateDogAge(1)); // -> "Your doggie is 7 years old in dog years!"
-        console.log(calculateDogAge(2)); // -> "Your doggie is 14 years old in dog years!"
-        console.log(calculateDogAge(3)); // -> "Your doggie is 21 years old in dog years!"
-      }
-      main();
-      // // ! Do not change or remove the code below
-      // if (process.env.NODE_ENV !== "test") {
-      //   main();
-      // }
-      // module.exports = calculateDogAge;
+      //       function tellFortune(numKids, partnerNames, locations, jobTitles) {
+      //         // TODO complete this function
+      //         const job = selectRandomly(jobTitles);
+      //         const loc = selectRandomly(locations);
+      //         const partner = selectRandomly(partnerNames);
+      //         const kids = selectRandomly(numKids);
+      //         return `You will be a ${job} in ${loc}, married to a ${partner} with ${kids} kids.`;
+      //       }
+
+      //       function main() {
+      //         const numKids = [
+      //           2,
+      //           3,
+      //           4,
+      //           5,
+      //           10, // TODO add elements here
+      //         ];
+
+      //         const partnerNames = [
+      //           "hot girl", // TODO add elements here
+      //           "beautiful spouse", // TODO add elements here
+      //           "sweet girl", // TODO add elements here
+      //           "loving wife", // TODO add elements here
+      //           "kind wife", // TODO add elements here
+      //         ];
+
+      //         const locations = [
+      //           "Almere", // TODO add elements here
+      //           "Amsterdam", // TODO add elements here
+      //           "Hamburg", // TODO add elements here
+      //           "Groningen", // TODO add elements here
+      //           "Harderwijk", // TODO add elements here
+      //         ];
+
+      //         const jobTitles = [
+      //           "web developer",
+      //           "full stack developer",
+      //           "web engineer",
+      //           "senior trainer",
+      //           "back-end developer",
+      //           // TODO add elements here
+      //         ];
+
+      //         console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+      //         console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+      //         console.log(tellFortune(numKids, partnerNames, locations, jobTitles));
+      //       }
+      //       main();
+
+      //       ------------------- CONFUSION ------------------
     </script>
   </body>
 </html>
