@@ -1,6 +1,8 @@
 /**
- * You want to add a new message to show the user how many vacancies are left for a holiday home.
- * The messages are defined in the MESSAGE object below, as well as when to return which one.
+ * You want to add a new message to show the user how many vacancies are left 
+ * for a holiday home.
+ * The messages are defined in the MESSAGE object below, 
+ * as well as when to return which one.
  */
 
 const MESSAGE = {
@@ -8,7 +10,8 @@ const MESSAGE = {
   UNAVAILABLE: "Sorry, all the vacancies have been filled. Try again later",
   // If there is only 1 vacancy left, return this message
   ONLY1LEFT: "Act now! There is only one vacancy left",
-  // If there are 2 or 3 vacancies left, return this message (give the amount left (so 2 or 3) to the function)
+  // If there are 2 or 3 vacancies left, 
+  // return this message(give the amount left (so 2 or 3) to the function)
   ONLYXLEFT: (numberLeft) =>
     `Act quickly! There are only ${numberLeft} vacancies left`,
   // If there is more than 3 left, then return this message
@@ -31,17 +34,32 @@ const MESSAGE = {
  *  rentalId: <string>,
  * }
  *
- * Every time a user books a home a new element is added to the bookings array with the id of the rental. This is the way your app tracks who has reserved which rental property.
+ * Every time a user books a home a new element is added 
+ * to the bookings array with the id of the rental. 
+ * This is the way your app tracks who has reserved which rental property.
  * 
  * In the function we have written out the steps for you to help you along.
  */
 const getVacancyMessage = (rental, bookings = []) => {
-  // Get the amount of bookings that are reserved for the rental (rentalId in `booking` object is the same as the id in the `rental` parameter)
-
-  // Calculate the amount available for this rental (the total number available - the amount that are reserved)
-
+  // Get the amount of bookings that are reserved for the rental 
+  // (rentalId in `booking` object is the same as the id in the`rental` parameter)
+  const amountOfBookings = bookings.filter(
+   (booking) => booking.rentalId === rental.id
+  ).length
+  
+  // Calculate the amount available for this rental
+  // (the total number available - the amount that are reserved)
+  const available = rental.totalNumberAvailable - amountOfBookings;
   // Return the right message using the MESSAGE object
-
+  if (available <= 0) {
+  return MESSAGE.UNAVAILABLE
+  } else if (available === 1) {
+    return MESSAGE.ONLY1LEFT  
+  } else if (available === 2 || available === 3){
+    return MESSAGE.ONLYXLEFT(available);
+  } else {
+    return MESSAGE.AVAILABLE;
+}
 };
 
 /**

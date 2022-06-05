@@ -2,19 +2,30 @@
  * It is time to build the search part for your rental app.
  * The user can filter the rentals on the following properties:
  *   - nearLake => a boolean to check if the rental is near the lake
- *   - tag => every rental property can choose some tags. The user can select a tag, which should filter all the rentals that have that tag in their tags array
+ *   - tag => every rental property can choose some tags. 
+ * The user can select a tag, which should filter all the rentals 
+ * that have that tag in their tags array
  */
 
 /**
  * Fill in the following function. The function has 3 parameters:
- * - `rentals`: An array of rental properties to filter. Have a look at the `testRentals` at the bottom of this file to see the structure you expect
- * - `nearLake`: A boolean to be used when filtering. If this is true only rentals with the `nearLake` boolean being true should be in the resulting array. If false then only rentals with the `nearLake` boolean being false should be in the resulting array.
- * - `tag`: A string to be used when filtering. Only rentals that have this `tag` in their `tags` array should be in the resulting array.
+ * - `rentals`: An array of rental properties to filter. 
+ * Have a look at the `testRentals` at the bottom of this file to see the structure 
+ * you expect
+ * - `nearLake`: A boolean to be used when filtering. 
+ * If this is true only rentals with the `nearLake` boolean being true should be 
+ * in the resulting array. 
+ * If false then only rentals with the `nearLake` boolean being false should be in the
+ *  resulting array.
+ * - `tag`: A string to be used when filtering. 
+ * Only rentals that have this `tag` in their `tags` array should be in the resulting 
+ * array.
  */
 const filterRentals = (rentals = [], nearLake, tag) => {
-  
+  return rentals.filter(
+    (rental) => rental.nearLake === nearLake && rental.tags.includes(tag)
+  )
 };
-
 /**
  * TEST CODE. DO NOT EDIT
  */

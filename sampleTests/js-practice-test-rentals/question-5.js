@@ -1,24 +1,47 @@
 /**
  * In The Netherlands, many people go crazy about ice skating on the natural lakes.
  * Unfortunately for those people it doesn't happen very often that this is possible.
- * You want to add a nice feature for Dutch rental properties near natural lakes to show what days may be great to rent to go skating.
+ * You want to add a nice feature for Dutch rental properties near 
+ * natural lakes to show what days may be great to rent to go skating.
  *
- * Complete the function below that takes an array of weather data and gives the first date when it will be possible to skate.
- * If it is not possible it should return the string 'Helaas pindakaas'. Which in Dutch literally means 'Too bad peanutbutter', the peanutbutter is just there for the rhyme.
+ * Complete the function below that takes an array of weather data and gives the 
+ * first date when it will be possible to skate.
+ * If it is not possible it should return the string 'Helaas pindakaas'. 
+ * Which in Dutch literally means 'Too bad peanutbutter', 
+ * the peanutbutter is just there for the rhyme.
  **/
 
 /**
- * This function calculates the first day it will be possible to skate in the given data or sends back 'Helaas pindakaas' if it is not possible.
- *
- * The data parameter should be an array of objects. Those objects should have 3 properties:
+ * The data parameter should be an array of objects. 
+ * Those objects should have 3 properties:
  *   - date: The date that the temperatures are for
  *   - lowestTemperature: The lowest temperature measured on that day
  *   - highestTemperature: The highest temperature measured on that day
  *
- * To determine if you can ice skate weeronline says that the temperature should not go above 0 (so 0 is fine) for 5 consecutive days. It is then possible to ice skate on the day after those 5 days
+ * To determine if you can ice skate weeronline says that the temperature should 
+ * not go above 0 (so 0 is fine) for 5 consecutive days. It is then possible to 
+ * ice skate on the day after those 5 days
  */
+
 const possibleSkateDays = (data) => {
+  let numberOfCorrectDays = 0;
+  let goodDays = [];
   
+  data.forEach((weatherdata) => {
+    if (weatherdata.highestTemperature <= 0) {
+      numberOfCorrectDays++;
+    } else {
+      numberOfCorrectDays = 0;
+    }
+    if (numberOfCorrectDays > 5) {
+      goodDays.push(weatherdata.date);
+    }
+  });
+  if (goodDays.length > 0) {
+    return goodDays;
+  } else {
+    return "Helaas pindakaas";
+  }
 };
 
 /**
