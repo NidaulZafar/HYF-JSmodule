@@ -28,12 +28,28 @@ const countElements = (arr = [], element) => {
 
 /**
  * TEST CODE: ONLY EDIT THIS
- * We've provided some syntax for you but feel free to change it to your liking! It should follow jest syntax though!
+ * We've provided some syntax for you but feel free to change it to your liking! 
+ * It should follow jest syntax though!
  *
- * To run the test make sure you have done an `npm install` command in your terminal and then run `npm t` or `npm run test`
+ * To run the test make sure you have done an `npm install` 
+ * command in your terminal and then run `npm t` or `npm run test`
  */
+// describe("countElements", () => {
+//   it("", () => {
+//     expect(false).toBe(true);
+//   });
+// });
 describe("countElements", () => {
-  it("", () => {
-    expect(false).toBe(true);
+  test("if array is not an array return 0", () => {
+    expect(countElements(null)).toBe(0);
   });
+
+  test("returns the element count correctly", () => {
+    expect(countElements([1, 2, 3, 4, 2], 2)).toBe(2);
+    expect(countElements([1, 2, 3, 4, 2], 3)).toBe(1);
+    expect(countElements([1, 2, 3, 4, 2, "a"], "a")).toBe(1);
+  })
 });
+
+
+
