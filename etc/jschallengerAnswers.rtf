@@ -1,0 +1,2076 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;
+\f3\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red249\green179\blue29;\red29\green198\blue4;\red13\green18\blue31;
+\red83\green162\blue232;\red255\green255\blue255;\red144\green255\blue232;\red231\green101\blue234;\red254\green216\blue10;
+\red39\green49\blue67;\red253\green148\blue9;\red251\green2\blue7;\red249\green179\blue29;\red39\green49\blue67;
+\red83\green162\blue232;\red13\green18\blue31;\red144\green255\blue232;\red231\green101\blue234;\red254\green216\blue10;
+\red253\green148\blue9;\red251\green2\blue7;\red252\green39\blue18;\red0\green0\blue255;\red0\green0\blue0;
+\red252\green120\blue146;\red20\green28\blue42;\red49\green186\blue255;\red129\green136\blue180;\red254\green185\blue91;
+\red29\green198\blue4;\red219\green226\blue236;\red33\green255\blue6;}
+{\*\expandedcolortbl;;\cssrgb\c98431\c74902\c14118;\cssrgb\c4314\c80000\c0;\cssrgb\c5882\c9020\c16471;
+\cssrgb\c38824\c70196\c92941;\cssrgb\c100000\c100000\c100000;\cssrgb\c61961\c100000\c92941;\cssrgb\c93333\c50980\c93333;\cssrgb\c100000\c86667\c0;
+\cssrgb\c20000\c25490\c33333;\cssrgb\c100000\c64706\c0;\cssrgb\c100000\c14913\c0;\cssrgb\c98431\c74902\c14118;\cssrgb\c20000\c25490\c33333;
+\cssrgb\c38824\c70196\c92941;\cssrgb\c5882\c9020\c16471;\cssrgb\c61961\c100000\c92941;\cssrgb\c93333\c50980\c93333;\cssrgb\c100000\c86667\c0;
+\cssrgb\c100000\c64706\c0;\cssrgb\c100000\c14913\c0;\cssrgb\c100000\c25271\c7591;\cssrgb\c1680\c19835\c100000;\cssrgb\c0\c0\c0;
+\cssrgb\c100000\c56078\c63922;\cssrgb\c10196\c14902\c21961;\cssrgb\c21961\c78039\c100000;\cssrgb\c57647\c60784\c75686;\cssrgb\c100000\c77255\c42745;
+\cssrgb\c4314\c80000\c0;\cssrgb\c88627\c90980\c94118;\cssrgb\c0\c97680\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh14860\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+https://zenn.dev/cyamy/scraps/01d3778aa447d3\
+\
+\
+JS basics\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf2 \expnd0\expndtw0\kerning0
+How many times does a character occur?\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf3 \cb4 //\'a0Write a function that takes two strings (a and b) as arguments\
+//\'a0Return the number of times a occurs in b\
+\pard\pardeftab720\partightenfactor0
+\cf5 function\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb4 myFunction\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb4 (\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb4 a, b\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb4 )\cb1 \
+\cb4 \{\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb4 return\cf6  b.\cf9 split\cf7 (\cf6 a\cf7 )\cf6 .length \cf7 -1;\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb4 \}\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf2 \cb1 Check if a number is a whole number\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb4    \cb1 \
+\cb4    \cf8 return\cf6  Number.isInteger\cf7 (\cf6 a\cf7 )\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb4 \}\
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb4   \cf8 return\cf6  a \cf7 -\cf6  Math.floor\cf7 (\cf6 a\cf7 )\cf6  \cf7 ===\cf6  \cf7 0\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb4 \}\cf6 \cb1 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf2 Multiplication, division, and comparison operators\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf6 \cb10 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 ,\cf6  b\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb4    \cf8 if\cf6  \cf7 (\cf6 a \cf7 <\cf6  b\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4    \cf8 return\cf6  a / b\cb1 \
+\cb4    \cf7 \}\cf6  \cf5 else\cf6  \cf7 \{\cf6 \cb1 \
+\cb4    \cf8 return\cf6  a \cf7 *\cf6  b\cb1 \
+\cb4    \cf7 \}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb4 \}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 ,\cf6  b\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb4   \cf8 return\cf6  a \cf7 <\cf6  b ? a / b : a \cf7 *\cf6  b\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \cb4 \}\cf6 \cb1 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf2 Check whether a string contains another string and concatenate\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 ,\cf6  b\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4    \cf8 if\cf6  \cf7 (\cf6 a.\cf9 includes\cf7 (\cf6 b\cf7 ))\{\cf6 \cb1 \
+\cb4        \cf8 return\cf6  \cf7 (\cf6 b \cf7 +\cf6  a\cf7 )\cf6  \cb1 \
+\cb4       \cf7 \}\cf6  \cf5 else\cf6  \cf7 \{\cf6 \cb1 \
+\cb4           \cf8 return\cf6  \cf7 (\cf6 a \cf7 +\cf6  b\cf7 )\cf6 \cb1 \
+\cb4       \cf7 \}\cf6 \cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 ,\cf6  b\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4   \cf8 return\cf6  a.indexOf\cf7 (\cf6 b\cf7 )\cf6  \cf7 ===\cf6  \cf7 -1\cf6  ? a \cf7 +\cf6  b : b \cf7 +\cf6  a\cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf2 Round a number to 2 decimal places\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4    \cf8 return\cf6  Math.round\cf7 ((\cf6 a \cf7 +\cf6  Number.EPSILON\cf7 )\cf6  \cf7 *\cf6  \cf7 100)\cf6  / \cf7 100\cf6 \cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4   \cf8 return\cf6  Number\cf7 (\cf6 a.toFixed\cf7 (2));\cf6 \cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf2 Clear up the chaos behind these strings\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 ,\cf6  b\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4    \cf5 let\cf6  c \cf7 =\cf6  a.replace\cf7 (\cf6 /\cf7 [\cf6 ^a\cf7 -\cf6 zA\cf7 -\cf6 Z \cf7 ]\cf6 /g\cf7 ,\cf6  \cf11 ""\cf7 )\cf6  \cf7 +\cf6  b\cb1 \
+\cb4        .\cf9 split\cf7 (\cf11 ""\cf7 )\cf6 \cb1 \
+\cb4        .\cf9 reverse\cf7 ()\cf6 \cb1 \
+\cb4        .\cf9 join\cf7 (\cf11 ""\cf7 )\cf6 \cb1 \
+\cb4        .replace\cf7 (\cf6 /\cf7 [\cf6 ^a\cf7 -\cf6 zA\cf7 -\cf6 Z \cf7 ]\cf6 /g\cf7 ,\cf6  \cf11 ""\cf7 );\cf6 \cb1 \
+\cb4    \cf8 return\cf6  c.\cf9 charAt\cf7 (0)\cf6 .\cf9 toUpperCase\cf7 ()\cf6  \cf7 +\cf6  c.\cf9 slice\cf7 (1)\cf6 \cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 ,\cf6  b\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4   \cf5 const\cf6  func \cf7 =\cf6  x \cf7 =>\cf6  x.replace\cf7 (\cf11 '%'\cf7 ,\cf11 ''\cf7 );\cf6 \cb1 \
+\cb4   \cf5 const\cf6  first \cf7 =\cf6  func\cf7 (\cf6 a\cf7 );\cf6 \cb1 \
+\cb4   \cf5 const\cf6  second \cf7 =\cf6  func\cf7 (\cf6 b\cf7 )\cf6 .\cf9 split\cf7 (\cf11 ''\cf7 )\cf6 .\cf9 reverse\cf7 ()\cf6 .\cf9 join\cf7 (\cf11 ''\cf7 );\cf6 \cb1 \
+\cb4   \cf8 return\cf6  first.\cf9 charAt\cf7 (0)\cf6 .\cf9 toUpperCase\cf7 ()\cf6  \cf7 +\cf6  first.\cf9 slice\cf7 (1)\cf6  \cf7 +\cf6  second\cf7 ;\cf6 \cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf2 Find next higher natural number that is divisble by y\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 x\cf7 ,\cf6  y\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4    \cf8 if\cf7 (\cf6 x % y \cf7 ===\cf6  \cf7 0)\{\cf6 \cb1 \
+\cb4        \cf8 return\cf6  x\cf7 ;\cf6 \cb1 \
+\cb4    \cf7 \}\cf6  \cf5 else\cf6  \cf7 \{\cf6 \cb1 \
+\cb4        \cf8 while\cf6  \cf7 (\cf6 x % y !\cf7 ==\cf6  \cf7 0)\{\cf6 \cb1 \
+\cb4            x\cf7 ++;\cf6 \cb1 \
+\cb4        \cf7 \}\cf6 \cb1 \
+\cb4        \cb1 \
+\cb4        \cf7 \}\cf6 \cb1 \
+\cb4    \cf8 return\cf6  x\cf7 ;\cf6 \cb1 \
+\cb4        \cb1 \
+\cb4    \cb1 \
+\cb4    \cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 x\cf7 ,\cf6  y\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4   \cf8 while\cf6  \cf7 (\cf6 x % y !\cf7 ==\cf6  \cf7 0)\cf6  x\cf7 ++;\cf6 \cb1 \
+\cb4   \cf8 return\cf6  x\cf7 ; \cf6 \cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf2 Return the next higher prime number\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4    \cf5 function\cf6  isPrime\cf7 (\cf6 a\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4        \cf8 for\cf6  \cf7 (\cf5 let\cf6  i \cf7 =\cf6  \cf7 2;\cf6  i \cf7 <=\cf6  Math.sqrt\cf7 (\cf6 a\cf7 );\cf6  i\cf7 ++)\cf6  \cf7 \{\cf6 \cb1 \
+\cb4          \cf8 if\cf6  \cf7 (\cf6 a % i \cf7 ==\cf6  \cf7 0)\cf6 \cb1 \
+\cb4            \cf8 return\cf6  \cf5 false\cf7 ;\cf6 \cb1 \
+\cb4        \cf7 \}\cf6 \cb1 \
+\cb4        \cf8 return\cf6  \cf5 true\cf7 ;\cf6 \cb1 \
+\cb4      \cf7 \}\cf6 \cb1 \
+\cb4      \cb1 \
+\cb4      \cf8 while\cf6  \cf7 (\cf6 !isPrime\cf7 (\cf6 a\cf7 ))\cf6  \cf7 \{\cf6 \cb1 \
+\cb4          a\cf7 ++;\cf6 \cb1 \
+\cb4      \cf7 \}\cf6 \cb1 \
+\cb4      \cf8 return\cf7 (\cf6 a\cf7 );\cf6 \cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf5 \cb4 function\cf6  myFunction\cf7 (\cf6  a \cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4   \cf5 function\cf6  isPrime\cf7 (\cf6 num\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4     \cf8 for\cf6  \cf7 (\cf5 let\cf6  i \cf7 =\cf6  \cf7 2;\cf6  i \cf7 <=\cf6  Math.sqrt\cf7 (\cf6 num\cf7 );\cf6  i\cf7 ++)\cf6  \cf7 \{\cf6 \cb1 \
+\cb4       \cf8 if\cf6  \cf7 (\cf6 num % i \cf7 ===\cf6  \cf7 0)\cf6  \cf8 return\cf6  \cf5 false\cf7 ;\cf6 \cb1 \
+\cb4     \cf7 \}\cf6 \cb1 \
+\cb4     \cf8 return\cf6  num \cf7 >\cf6  \cf7 1;\cf6 \cb1 \
+\cb4   \cf7 \}\cf6 \cb1 \
+\cb4  \cf5 let\cf6  n \cf7 =\cf6  a\cf7 ;\cf6 \cb1 \
+\cb4  \cf8 while\cf6  \cf7 (\cf6 !isPrime\cf7 (\cf6 n\cf7 ))\cf6  n\cf7 ++;\cf6 \cb1 \
+\cf8 \cb4 return\cf6  n\cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf2 Insert character after every n characters (backwards)\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 ,\cf6  b\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4    \cf8 return\cf6  a.replace\cf7 (\cf6 /\cf7 (\cf6 ?\cf7 =(\cf6 ...\cf7 )+$)\cf6 /g\cf7 ,\cf6  b\cf7 );\cf6 \cb1 \
+\cb4    \cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 a\cf7 ,\cf6  b\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4    \cf5 let\cf6  result \cf7 =\cf6  \cf7 [];\cf6 \cb1 \
+\cb4    \cf5 let\cf6  rest \cf7 =\cf6  a\cf7 ;\cf6 \cb1 \
+\cb4    \cf8 while\cf6  \cf7 (\cf6 rest.length\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4    	result.push\cf7 (\cf6 rest.\cf9 slice\cf7 (-3));\cf6 \cb1 \
+\cb4    	rest \cf7 =\cf6  rest.\cf9 slice\cf7 (0,\cf6  \cf7 -3);\cf6 \cb1 \
+\cb4    \cf7 \}\cf6 \cb1 \
+\cb4    \cf8 return\cf6  result.\cf9 reverse\cf7 ()\cf6 .\cf9 join\cf7 (\cf6 b\cf7 );\cf6 \cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf2 Find the correct word by incrementing letters in alphabet\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 str\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4    \cf8 return\cf6  str.\cf9 split\cf7 (\cf11 ""\cf7 )\cf6 .\cf9 reduce\cf7 ((\cf6 v\cf7 ,\cf6  s\cf7 )\cf6  \cf7 =>\cf6  v \cf7 +\cf6  String.\cf9 fromCharCode\cf7 (\cf6 s.\cf9 charCodeAt\cf7 (0)\cf6  \cf7 +\cf6  \cf7 1),\cf6  \cf11 ""\cf7 );\cf6 \cb1 \
+\cb4    \cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb10 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf5 \cb4 function\cf6  myFunction\cf7 (\cf6 str\cf7 )\cf6  \cf7 \{\cf6 \cb1 \
+\cb4   \cf5 const\cf6  arr \cf7 =\cf6  \cf7 [\cf6 ...str\cf7 ];\cf6 \cb1 \
+\cb4   \cf5 const\cf6  correctedArray \cf7 =\cf6  arr.\cf9 map\cf7 (\cf6 e \cf7 =>\cf6  String.\cf9 fromCharCode\cf7 (\cf6 e.\cf9 charCodeAt\cf7 ()+1));\cf6 \cb1 \
+\cb4   \cf8 return\cf6  correctedArray.\cf9 join\cf7 (\cf11 ''\cf7 );\cf6 \cb1 \
+\cf7 \cb4 \}\cf6 \cb1 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs48 \cf12 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Javascript Arrays
+\fs36 \cf13 \
+Remove a specific array element\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  newArr \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 [];\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 for\cf6 \strokec6  \cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  i \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 0;\cf6 \strokec6  i \cf17 \strokec17 <\cf6 \strokec6  a.length\cf17 \strokec17 ;\cf6 \strokec6  i\cf17 \strokec17 ++)\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ]\cf6 \strokec6  !\cf17 \strokec17 ==\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    newArr.push\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ])\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  newArr\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6  a\cf17 \strokec17 ,\cf6 \strokec6  b \cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  a.\cf19 \strokec19 filter\cf17 \strokec17 (\cf6 \strokec6 cur \cf17 \strokec17 =>\cf6 \strokec6  cur !\cf17 \strokec17 ==\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Return the average of an array of numbers\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  sum \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 0;\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 for\cf6 \strokec6  \cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  i \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 0;\cf6 \strokec6  i \cf17 \strokec17 <\cf6 \strokec6  arr.length\cf17 \strokec17 ;\cf6 \strokec6  i\cf17 \strokec17 ++)\{\cf6 \cb1 \strokec6 \
+\cb16    sum \cf17 \strokec17 +=\cf6 \strokec6  arr\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ]\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  sum / arr.length\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6  arr \cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cf18 \cb16 \strokec18 return\cf6 \strokec6  arr.\cf19 \strokec19 reduce\cf17 \strokec17 ((\cf6 \strokec6 acc\cf17 \strokec17 ,\cf6 \strokec6  cur\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  acc \cf17 \strokec17 +\cf6 \strokec6  cur\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 0)\cf6 \strokec6  / arr.length\cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Return the longest string from an array of strings\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  maxWord \cf17 \strokec17 =\cf6 \strokec6  \cf20 \strokec20 ""\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 for\cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  i \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 0;\cf6 \strokec6  i \cf17 \strokec17 <\cf6 \strokec6  arr.length\cf17 \strokec17 ;\cf6 \strokec6  i\cf17 \strokec17 ++)\{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ]\cf6 \strokec6 .length \cf17 \strokec17 >\cf6 \strokec6  maxWord.length\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    maxWord \cf17 \strokec17 =\cf6 \strokec6  arr\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ];\cf6 \strokec6  \cb1 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  maxWord\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6  arr \cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cf18 \cb16 \strokec18 return\cf6 \strokec6  arr.\cf19 \strokec19 reduce\cf17 \strokec17 ((\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  a.length \cf17 \strokec17 <=\cf6 \strokec6  b.length ? b : a\cf17 \strokec17 )\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Check if all array elements are equal\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  target \cf17 \strokec17 =\cf6 \strokec6  arr\cf17 \strokec17 [0];\cf6 \cb1 \strokec6 \
+\cb16     \cf15 \strokec15 let\cf6 \strokec6  result \cf17 \strokec17 =\cf6 \strokec6  \cf15 \strokec15 true\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16     \cf18 \strokec18 for\cf6 \strokec6  \cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  i \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 1;\cf6 \strokec6  i \cf17 \strokec17 <\cf6 \strokec6  arr.length\cf17 \strokec17 ;\cf6 \strokec6  i\cf17 \strokec17 ++)\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16         \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 ===\cf6 \strokec6  target\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16         result \cf17 \strokec17 =\cf6 \strokec6  \cf15 \strokec15 true\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16         \cf17 \strokec17 \}\cf6 \strokec6  \cf15 \strokec15 else\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16         result \cf17 \strokec17 =\cf6 \strokec6  \cf15 \strokec15 false\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16         \cf18 \strokec18 break\cf6 \cb1 \strokec6 \
+\cb16         \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16     \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cf18 \cb16 \strokec18 return\cf6 \strokec6  result\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6  arr \cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  \cf15 \strokec15 new\cf6 \strokec6  Set\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 )\cf6 \strokec6 .size \cf17 \strokec17 ===\cf6 \strokec6  \cf17 \strokec17 1\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Merge an arbitrary number of arrays\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 ...arrays\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  newArr \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 [];\cf6 \cb1 \strokec6 \
+\cb16        \cb1 \
+\cb16        \cf15 \strokec15 let\cf6 \strokec6  final \cf17 \strokec17 =\cf6 \strokec6  newArr.concat\cf17 \strokec17 (\cf6 \strokec6 ...arrays\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 return\cf6 \strokec6  final\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6  ...arrays \cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cf18 \cb16 \strokec18 return\cf6 \strokec6  arrays.\cf19 \strokec19 flat\cf17 \strokec17 ()\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Sort array by object property\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 function\cf6 \strokec6  compare\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16      \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6  a.b \cf17 \strokec17 <\cf6 \strokec6  b.b \cf17 \strokec17 )\{\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 -1;\cf6 \cb1 \strokec6 \
+\cb16      \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16      \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6  a.b \cf17 \strokec17 >\cf6 \strokec6  b.b \cf17 \strokec17 )\{\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 1;\cf6 \cb1 \strokec6 \
+\cb16      \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  arr.\cf19 \strokec19 sort\cf17 \strokec17 (\cf6 \strokec6 compare\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 const\cf6 \strokec6  \cf19 \strokec19 sort\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 x\cf17 \strokec17 ,\cf6 \strokec6  y\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  x.b \cf17 \strokec17 -\cf6 \strokec6  y.b\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  arr.\cf19 \strokec19 sort\cf17 \strokec17 (\cf19 \strokec19 sort\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Merge two arrays with duplicate values\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16     \cf15 \strokec15 let\cf6 \strokec6  newArr \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 [];\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 for\cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  i \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 0;\cf6 \strokec6  i \cf17 \strokec17 <\cf6 \strokec6  a.length\cf17 \strokec17 ;\cf6 \strokec6  i\cf17 \strokec17 ++)\{\cf6 \cb1 \strokec6 \
+\cb16            newArr.push\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ]);\cf6 \cb1 \strokec6 \
+\cb16        \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 for\cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  i \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 0;\cf6 \strokec6  i \cf17 \strokec17 <\cf6 \strokec6  b.length\cf17 \strokec17 ;\cf6 \strokec6  i\cf17 \strokec17 ++)\{\cf6 \cb1 \strokec6 \
+\cb16            \cf18 \strokec18 if\cf17 \strokec17 (\cf6 \strokec6 !newArr.\cf19 \strokec19 includes\cf17 \strokec17 (\cf6 \strokec6 b\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ]))\cf6 \cb1 \strokec6 \
+\cb16            newArr.push\cf17 \strokec17 (\cf6 \strokec6 b\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ]);\cf6 \cb1 \strokec6 \
+\cb16        \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16        \cf15 \strokec15 function\cf6 \strokec6  \cf19 \strokec19 sort\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16      \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 a \cf17 \strokec17 <\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 -1;\cf6 \cb1 \strokec6 \
+\cb16      \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16      \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 a \cf17 \strokec17 >\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 1;\cf6 \cb1 \strokec6 \
+\cb16      \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16        \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16        newArr.\cf19 \strokec19 sort\cf17 \strokec17 (\cf19 \strokec19 sort\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 return\cf6 \strokec6  newArr\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16       \cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 ...\cf15 \strokec15 new\cf6 \strokec6  Set\cf17 \strokec17 ([\cf6 \strokec6 ...a\cf17 \strokec17 ,\cf6 \strokec6  ...b\cf17 \strokec17 ])]\cf6 \strokec6 .\cf19 \strokec19 sort\cf17 \strokec17 ((\cf6 \strokec6 x\cf17 \strokec17 ,\cf6 \strokec6  y\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  x \cf17 \strokec17 -\cf6 \strokec6  y\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Sum up all array elements with values greater than\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  sum \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 0;\cf6 \cb1 \strokec6 \
+\cb16        a.forEach\cf17 \strokec17 ((\cf6 \strokec6 elem\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16            \cf18 \strokec18 if\cf17 \strokec17 (\cf6 \strokec6 elem \cf17 \strokec17 >\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16            sum \cf17 \strokec17 =\cf6 \strokec6  sum \cf17 \strokec17 +\cf6 \strokec6  elem\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16            \cf18 \strokec18 return\cf6 \strokec6  sum\cb1 \
+\cb16            \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  sum\cb1 \
+\cb16    \cf17 \strokec17 \})\cf6 \strokec6  \cb1 \
+\cb16    \cf18 \strokec18 return\cf17 \strokec17 (\cf6 \strokec6 sum\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  a.\cf19 \strokec19 reduce\cf17 \strokec17 ((\cf6 \strokec6 sum\cf17 \strokec17 ,\cf6 \strokec6  cur\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16     \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 cur \cf17 \strokec17 >\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf18 \strokec18 return\cf6 \strokec6  sum \cf17 \strokec17 +\cf6 \strokec6  cur\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16     \cf18 \strokec18 return\cf6 \strokec6  sum\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16   \cf17 \strokec17 \},\cf6 \strokec6  \cf17 \strokec17 0);\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Create a range of numbers\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 min\cf17 \strokec17 ,\cf6 \strokec6  max\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  arr \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 [];\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 while\cf17 \strokec17 (\cf6 \strokec6 min \cf17 \strokec17 <=\cf6 \strokec6  max\cf17 \strokec17 )\{\cf6 \cb1 \strokec6 \
+\cb16    arr.push\cf17 \strokec17 (\cf6 \strokec6 min\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16    min\cf17 \strokec17 ++\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  arr\cf17 \strokec17 ;\cf6 \strokec6  \cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 min\cf17 \strokec17 ,\cf6 \strokec6  max\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf15 \strokec15 let\cf6 \strokec6  arr \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 [];\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 for\cf6 \strokec6  \cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  i \cf17 \strokec17 =\cf6 \strokec6  min\cf17 \strokec17 ;\cf6 \strokec6  i \cf17 \strokec17 <=\cf6 \strokec6  max\cf17 \strokec17 ;\cf6 \strokec6  i\cf17 \strokec17 ++)\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16     arr.push\cf17 \strokec17 (\cf6 \strokec6 i\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16   \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cf18 \cb16 \strokec18 return\cf6 \strokec6  arr\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Group array of strings by first letter\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 var\cf6 \strokec6  obj \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 \{\};\cf6 \cb1 \strokec6 \
+\cb16 arr.forEach\cf17 \strokec17 ((\cf6 \strokec6 value\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cf18 \cb16 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 obj\cf17 \strokec17 [\cf6 \strokec6 value.\cf19 \strokec19 charAt\cf17 \strokec17 (0)\cf6 \strokec6 .\cf19 \strokec19 toLowerCase\cf17 \strokec17 ()]\cf6 \strokec6  \cf17 \strokec17 ===\cf6 \strokec6  undefined\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16 obj\cf17 \strokec17 [\cf6 \strokec6 value.\cf19 \strokec19 charAt\cf17 \strokec17 (0)\cf6 \strokec6 .\cf19 \strokec19 toLowerCase\cf17 \strokec17 ()]\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 value\cf17 \strokec17 ];\cf6 \strokec6  \cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cf15 \cb16 \strokec15 else\cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   obj\cf17 \strokec17 [\cf6 \strokec6 value.\cf19 \strokec19 charAt\cf17 \strokec17 (0)\cf6 \strokec6 .\cf19 \strokec19 toLowerCase\cf17 \strokec17 ()]\cf6 \strokec6 .push\cf17 \strokec17 (\cf6 \strokec6 value\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \})\cf6 \cb1 \strokec6 \
+\cf18 \cb16 \strokec18 return\cf6 \strokec6  obj\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16  \cf18 \strokec18 return\cf6 \strokec6  arr.\cf19 \strokec19 reduce\cf17 \strokec17 ((\cf6 \strokec6 acc\cf17 \strokec17 ,\cf6 \strokec6  cur\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 const\cf6 \strokec6  firstLetter \cf17 \strokec17 =\cf6 \strokec6  cur.\cf19 \strokec19 toLowerCase\cf17 \strokec17 ()\cf6 \strokec6 .\cf19 \strokec19 charAt\cf17 \strokec17 (0);\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6  ...acc\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 firstLetter\cf17 \strokec17 ]\cf6 \strokec6 : \cf17 \strokec17 [\cf6 \strokec6 ...\cf17 \strokec17 (\cf6 \strokec6 acc\cf17 \strokec17 [\cf6 \strokec6 firstLetter\cf17 \strokec17 ]\cf6 \strokec6  || \cf17 \strokec17 []),\cf6 \strokec6  cur\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 \};\cf6 \cb1 \strokec6 \
+\cb16  \cf17 \strokec17 \},\cf6 \strokec6  \cf17 \strokec17 \{\});\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Define an array with conditional elements\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 ,\cf6 \strokec6  num\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  newArr \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 [];\cf6 \cb1 \strokec6 \
+\cb16        arr.forEach\cf17 \strokec17 (\cf6 \strokec6 elem \cf17 \strokec17 =>\cf6 \strokec6  \cb1 \
+\cb16        newArr.push\cf17 \strokec17 (\cf6 \strokec6 elem\cf17 \strokec17 ));\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 if\cf17 \strokec17 (\cf6 \strokec6 num \cf17 \strokec17 <\cf6 \strokec6  \cf17 \strokec17 6)\{\cf6 \cb1 \strokec6 \
+\cb16            newArr.unshift\cf17 \strokec17 (0)\cf6 \cb1 \strokec6 \
+\cb16        \cf17 \strokec17 \}\cf6 \strokec6  \cf15 \strokec15 else\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16            newArr.unshift\cf17 \strokec17 (\cf6 \strokec6 num\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16        \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 return\cf6 \strokec6  newArr\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 ,\cf6 \strokec6  num\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16  \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 ...\cf17 \strokec17 (\cf6 \strokec6 num \cf17 \strokec17 >\cf6 \strokec6  \cf17 \strokec17 5\cf6 \strokec6  ? \cf17 \strokec17 [\cf6 \strokec6 num\cf17 \strokec17 ]\cf6 \strokec6  : \cf17 \strokec17 [0]),\cf6 \strokec6  ...arr\cf17 \strokec17 ];\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Get every nth element of array\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  n\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  newArr \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 [];\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 for\cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  i \cf17 \strokec17 =\cf6 \strokec6  n\cf17 \strokec17 -1;\cf6 \strokec6  i \cf17 \strokec17 <\cf6 \strokec6  a.length\cf17 \strokec17 ;\cf6 \strokec6  i \cf17 \strokec17 +=\cf6 \strokec6  n\cf17 \strokec17 )\{\cf6 \cb1 \strokec6 \
+\cb16            newArr.push\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ])\cf6 \cb1 \strokec6 \
+\cb16        \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 return\cf6 \strokec6  newArr\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  n\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  rest \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 ...a\cf17 \strokec17 ];\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  result \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 [];\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 for\cf6 \strokec6  \cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  i \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 0;\cf6 \strokec6  i \cf17 \strokec17 <\cf6 \strokec6  a.length\cf17 \strokec17 ;\cf6 \strokec6  i\cf17 \strokec17 ++)\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16       \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 rest.length \cf17 \strokec17 <\cf6 \strokec6  n\cf17 \strokec17 )\cf6 \strokec6  \cf18 \strokec18 break\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16       result.push\cf17 \strokec17 (\cf6 \strokec6 rest\cf17 \strokec17 [\cf6 \strokec6 n \cf17 \strokec17 -\cf6 \strokec6  \cf17 \strokec17 1]);\cf6 \cb1 \strokec6 \
+\cb16       rest \cf17 \strokec17 =\cf6 \strokec6  rest.\cf19 \strokec19 slice\cf17 \strokec17 (\cf6 \strokec6 n\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  result\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs48 \cf12 \strokec13 Javascript Objects
+\fs36 \cf13 \
+Accessing object properties one\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 obj\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  obj.country\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Check if property exists in object\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  a.hasOwnProperty\cf17 \strokec17 (\cf6 \strokec6 b\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  b \cf18 \strokec18 in\cf6 \strokec6  a\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Creating Javascript objects two\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  myObj \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 \{[\cf6 \strokec6 a\cf17 \strokec17 ]\cf6 \strokec6 : b\cf17 \strokec17 \};\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  myObj\cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 a\cf17 \strokec17 ]\cf6 \strokec6 : b \cf17 \strokec17 \};\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Creating Javascript objects three\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  keys \cf17 \strokec17 =\cf6 \strokec6  a\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  values \cf17 \strokec17 =\cf6 \strokec6  b\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 var\cf6 \strokec6  result \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 \{\};\cf6 \cb1 \strokec6 \
+\cb16    keys.forEach\cf17 \strokec17 ((\cf6 \strokec6 key\cf17 \strokec17 ,\cf6 \strokec6  i\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  result\cf17 \strokec17 [\cf6 \strokec6 key\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  values\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ]);\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  result\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  a.\cf19 \strokec19 reduce\cf17 \strokec17 ((\cf6 \strokec6 acc\cf17 \strokec17 ,\cf6 \strokec6  cur\cf17 \strokec17 ,\cf6 \strokec6  i\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 (\{\cf6 \strokec6  ...acc\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 cur\cf17 \strokec17 ]\cf6 \strokec6 : b\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 \}),\cf6 \strokec6  \cf17 \strokec17 \{\});\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Extract keys from Javascript object\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  newArray \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 [];\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 for\cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  key \cf18 \strokec18 in\cf6 \strokec6  a\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16      newArray.push\cf17 \strokec17 (\cf6 \strokec6 key\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  newArray\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  Object.keys\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Sum object values\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  Object.values\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 )\cf6 \cb1 \strokec6 \
+\cb16       .\cf19 \strokec19 reduce\cf17 \strokec17 ((\cf6 \strokec6 acc\cf17 \strokec17 ,\cf6 \strokec6  cur\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  acc \cf17 \strokec17 +\cf6 \strokec6  cur\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 0)\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Remove a property from an object\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 obj\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 delete\cf6 \strokec6  obj.b\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  obj\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 obj\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf15 \strokec15 const\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6  b\cf17 \strokec17 ,\cf6 \strokec6  ...rest \cf17 \strokec17 \}\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  obj\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  rest\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Merge two objects with matching keys\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 x\cf17 \strokec17 ,\cf6 \strokec6  y\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    y.d \cf17 \strokec17 =\cf6 \strokec6  y.b\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16        \cf15 \strokec15 delete\cf6 \strokec6  y.b\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16        \cf15 \strokec15 const\cf6 \strokec6  obj \cf17 \strokec17 =\cf6 \strokec6  Object.assign\cf17 \strokec17 (\cf6 \strokec6 x\cf17 \strokec17 ,\cf6 \strokec6  y\cf17 \strokec17 )\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 return\cf6 \strokec6  obj\cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 x\cf17 \strokec17 ,\cf6 \strokec6  y\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf15 \strokec15 const\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6  b\cf17 \strokec17 ,\cf6 \strokec6  ...rest \cf17 \strokec17 \}\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  y\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6  ...x\cf17 \strokec17 ,\cf6 \strokec6  ...rest\cf17 \strokec17 ,\cf6 \strokec6  d: b \cf17 \strokec17 \};\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Multiply all object values by x\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 for\cf6 \strokec6  \cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  key \cf18 \strokec18 in\cf6 \strokec6  a\cf17 \strokec17 )\{\cf6 \cb1 \strokec6 \
+\cb16            a\cf17 \strokec17 [\cf6 \strokec6 key\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 *=\cf6 \strokec6  b\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16        \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 return\cf6 \strokec6  a\cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  Object.entries\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 )\cf6 \strokec6 .\cf19 \strokec19 reduce\cf17 \strokec17 ((\cf6 \strokec6 acc\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 key\cf17 \strokec17 ,\cf6 \strokec6  val\cf17 \strokec17 ])\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    	\cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6  ...acc\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 key\cf17 \strokec17 ]\cf6 \strokec6 : val \cf17 \strokec17 *\cf6 \strokec6  b \cf17 \strokec17 \};\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \},\cf6 \strokec6  \cf17 \strokec17 \{\});\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Swap object keys and values\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 obj\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16     \cb1 \
+\cb16   \cf15 \strokec15 var\cf6 \strokec6  ret \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 \{\};\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 for\cf17 \strokec17 (\cf15 \strokec15 var\cf6 \strokec6  key \cf18 \strokec18 in\cf6 \strokec6  obj\cf17 \strokec17 )\{\cf6 \cb1 \strokec6 \
+\cb16     ret\cf17 \strokec17 [\cf6 \strokec6 obj\cf17 \strokec17 [\cf6 \strokec6 key\cf17 \strokec17 ]]\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  key\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16   \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16   console.log\cf17 \strokec17 (\cf6 \strokec6 ret\cf17 \strokec17 )\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  ret\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 obj\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  Object.entries\cf17 \strokec17 (\cf6 \strokec6 obj\cf17 \strokec17 )\cf6 \strokec6 .\cf19 \strokec19 reduce\cf17 \strokec17 ((\cf6 \strokec6 acc\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 key\cf17 \strokec17 ,\cf6 \strokec6  val\cf17 \strokec17 ])\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16       \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6  ...acc\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 val\cf17 \strokec17 ]\cf6 \strokec6 : key \cf17 \strokec17 \};\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \},\cf6 \strokec6  \cf17 \strokec17 \{\});\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Replace empty strings in object with null values\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 obj\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 for\cf6 \strokec6  \cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  key \cf18 \strokec18 in\cf6 \strokec6  obj\cf17 \strokec17 )\{\cf6 \cb1 \strokec6 \
+\cb16               \cb1 \
+\cb16               \cf18 \strokec18 if\cf17 \strokec17 (\cf6 \strokec6 obj\cf17 \strokec17 [\cf6 \strokec6 key\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 ===\cf6 \strokec6  \cf20 \strokec20 ""\cf6 \strokec6  || obj\cf17 \strokec17 [\cf6 \strokec6 key\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 ===\cf6 \strokec6  \cf20 \strokec20 " "\cf6 \strokec6  \cf17 \strokec17 )\{\cf6 \cb1 \strokec6 \
+\cb16                   obj\cf17 \strokec17 [\cf6 \strokec6 key\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  \cf15 \strokec15 null\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16               \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16           \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16           \cf18 \strokec18 return\cf6 \strokec6  obj\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 obj\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf15 \strokec15 const\cf6 \strokec6  newObj \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6  ...obj \cf17 \strokec17 \};\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 for\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 key \cf18 \strokec18 in\cf6 \strokec6  newObj\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16     \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 newObj\cf17 \strokec17 [\cf6 \strokec6 key\cf17 \strokec17 ]\cf6 \strokec6 .trim\cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 ===\cf6 \strokec6  \cf20 \strokec20 ''\cf17 \strokec17 )\cf6 \strokec6  newObj\cf17 \strokec17 [\cf6 \strokec6 key\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  \cf15 \strokec15 null\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16   \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  newObj\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Extracting information from objects\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+\cf15 \cb16 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 obj\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  newObj \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 \{\};\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 obj.hasOwnProperty\cf17 \strokec17 (\cf20 \strokec20 "fn"\cf17 \strokec17 ))\{\cf6 \cb1 \strokec6 \
+\cb16            newObj\cf17 \strokec17 [\cf20 \strokec20 "fn"\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  obj\cf17 \strokec17 [\cf20 \strokec20 "fn"\cf17 \strokec17 ]\cf6 \cb1 \strokec6 \
+\cb16        \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 obj.hasOwnProperty\cf17 \strokec17 (\cf20 \strokec20 "ln"\cf17 \strokec17 ))\{\cf6 \cb1 \strokec6 \
+\cb16            newObj\cf17 \strokec17 [\cf20 \strokec20 "ln"\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  obj\cf17 \strokec17 [\cf20 \strokec20 "ln"\cf17 \strokec17 ]\cf6 \cb1 \strokec6 \
+\cb16        \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 obj.hasOwnProperty\cf17 \strokec17 (\cf20 \strokec20 "size"\cf17 \strokec17 ))\{\cf6 \cb1 \strokec6 \
+\cb16            newObj\cf17 \strokec17 [\cf20 \strokec20 "size"\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  \cf20 \strokec20 `$\{obj["size"]\}cm`\cf6 \cb1 \strokec6 \
+\cb16        \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 obj.hasOwnProperty\cf17 \strokec17 (\cf20 \strokec20 "weight"\cf17 \strokec17 ))\{\cf6 \cb1 \strokec6 \
+\cb16            newObj\cf17 \strokec17 [\cf20 \strokec20 "weight"\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  \cf20 \strokec20 `$\{obj["weight"]\}kg`\cf6 \cb1 \strokec6 \
+\cb16        \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  newObj\cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 obj\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16     fn: obj.fn\cf17 \strokec17 ,\cf6 \cb1 \strokec6 \
+\cb16     ln: obj.ln\cf17 \strokec17 ,\cf6 \cb1 \strokec6 \
+\cb16     ...\cf17 \strokec17 (\cf6 \strokec6 obj.size \cf17 \strokec17 &&\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6  size: \cf20 \strokec20 `$\{obj.size\}cm`\cf6 \strokec6  \cf17 \strokec17 \}),\cf6 \cb1 \strokec6 \
+\cb16     ...\cf17 \strokec17 (\cf6 \strokec6 obj.weight \cf17 \strokec17 &&\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6  weight: \cf20 \strokec20 `$\{obj.weight\}kg`\cf6 \strokec6  \cf17 \strokec17 \}),\cf6 \cb1 \strokec6 \
+\cb16   \cf17 \strokec17 \};\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Add property to each object in array\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 ,\cf6 \strokec6  str\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  newArr \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 [];\cf6 \cb1 \strokec6 \
+\cb16    newArr.push\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 [0]);\cf6 \cb1 \strokec6 \
+\cb16    newArr.push\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 [1]);\cf6 \cb1 \strokec6 \
+\cb16    newArr.forEach\cf17 \strokec17 (\cf6 \strokec6 obj \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16        obj.continent \cf17 \strokec17 =\cf6 \strokec6  str\cb1 \
+\cb16    \cf17 \strokec17 \})\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  newArr\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 ,\cf6 \strokec6  str\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  arr.\cf19 \strokec19 map\cf17 \strokec17 ((\cf6 \strokec6 obj\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 (\{\cf6 \strokec6  ...obj\cf17 \strokec17 ,\cf6 \strokec6  continent: str \cf17 \strokec17 \}));\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Convert array to object with counter\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 const\cf6 \strokec6  count \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 \{\};\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 for\cf6 \strokec6  \cf17 \strokec17 (\cf15 \strokec15 const\cf6 \strokec6  element of a\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16      \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 count\cf17 \strokec17 [\cf6 \strokec6 element\cf17 \strokec17 ])\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16        count\cf17 \strokec17 [\cf6 \strokec6 element\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 +=\cf6 \strokec6  \cf17 \strokec17 1;\cf6 \cb1 \strokec6 \
+\cb16      \cf17 \strokec17 \}\cf6 \strokec6  \cf15 \strokec15 else\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16        count\cf17 \strokec17 [\cf6 \strokec6 element\cf17 \strokec17 ]\cf6 \strokec6  \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 1;\cf6 \cb1 \strokec6 \
+\cb16      \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  count\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  a.\cf19 \strokec19 reduce\cf17 \strokec17 ((\cf6 \strokec6 acc\cf17 \strokec17 ,\cf6 \strokec6  cur\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    	\cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6  ...acc\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 cur\cf17 \strokec17 ]\cf6 \strokec6 : \cf17 \strokec17 (\cf6 \strokec6 acc\cf17 \strokec17 [\cf6 \strokec6 cur\cf17 \strokec17 ]\cf6 \strokec6  || \cf17 \strokec17 0)\cf6 \strokec6  \cf17 \strokec17 +\cf6 \strokec6  \cf17 \strokec17 1\cf6 \strokec6  \cf17 \strokec17 \};\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \},\cf6 \strokec6  \cf17 \strokec17 \{\});\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs48 \cf21 Javascript Dates\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Check if two dates are equal\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\fs48 \cf21 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 a \cf17 \strokec17 >\cf6 \strokec6  b || a \cf17 \strokec17 <\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  \cf15 \strokec15 false\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \strokec6  \cf15 \strokec15 else\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  \cf15 \strokec15 true\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16      \cf18 \strokec18 return\cf6 \strokec6  a.getTime\cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 ===\cf6 \strokec6  b.getTime\cf17 \strokec17 ()\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Return the number of days between two dates\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 a \cf17 \strokec17 <\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 ((\cf6 \strokec6 b \cf17 \strokec17 -\cf6 \strokec6  a\cf17 \strokec17 )\cf6 \strokec6  / \cf17 \strokec17 1000)\cf6 \strokec6  / \cf17 \strokec17 86400;\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \strokec6  \cf15 \strokec15 else\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 ((\cf6 \strokec6 a \cf17 \strokec17 -\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  / \cf17 \strokec17 1000)\cf6 \strokec6  / \cf17 \strokec17 86400\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 const\cf6 \strokec6  dif \cf17 \strokec17 =\cf6 \strokec6  Math.abs\cf17 \strokec17 (\cf6 \strokec6 a \cf17 \strokec17 -\cf6 \strokec6  b\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  dif / \cf17 \strokec17 1000\cf6 \strokec6  / \cf17 \strokec17 60\cf6 \strokec6  / \cf17 \strokec17 60\cf6 \strokec6  / \cf17 \strokec17 24\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Check if two dates fall on the exact same day\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 a.toDateString\cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 ===\cf6 \strokec6  b.toDateString\cf17 \strokec17 ())\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16      \cf18 \strokec18 return\cf6 \strokec6  \cf15 \strokec15 true\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \strokec6  \cf15 \strokec15 else\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16      \cf18 \strokec18 return\cf6 \strokec6  \cf15 \strokec15 false\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  a.getFullYear\cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 ===\cf6 \strokec6  b.getFullYear\cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 &&\cf6 \cb1 \strokec6 \
+\cb16          a.getMonth\cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 ===\cf6 \strokec6  b.getMonth\cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 &&\cf6 \cb1 \strokec6 \
+\cb16          a.getDate\cf17 \strokec17 ()===\cf6 \strokec6  b.getDate\cf17 \strokec17 ()\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Check if two dates are within 1 hour from each other\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 if\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 a \cf17 \strokec17 <\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    result \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 ((\cf6 \strokec6 b \cf17 \strokec17 -\cf6 \strokec6  a\cf17 \strokec17 )\cf6 \strokec6  / \cf17 \strokec17 1000)\cf6 \strokec6  / \cf17 \strokec17 3600;\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \strokec6  \cf15 \strokec15 else\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    result \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 ((\cf6 \strokec6 a \cf17 \strokec17 -\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  / \cf17 \strokec17 1000)\cf6 \strokec6  / \cf17 \strokec17 3600;\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    console.log\cf17 \strokec17 (\cf6 \strokec6 result\cf17 \strokec17 )\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 if\cf17 \strokec17 (\cf6 \strokec6 result \cf17 \strokec17 <=\cf6 \strokec6  \cf17 \strokec17 1)\{\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 return\cf6 \strokec6  \cf15 \strokec15 true\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \strokec6  \cf15 \strokec15 else\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16        \cf18 \strokec18 return\cf6 \strokec6  \cf15 \strokec15 false\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  Math.abs\cf17 \strokec17 (\cf6 \strokec6 a \cf17 \strokec17 -\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  / \cf17 \strokec17 1000\cf6 \strokec6  / \cf17 \strokec17 60\cf6 \strokec6  \cf17 \strokec17 <=\cf6 \strokec6  \cf17 \strokec17 60\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Check if one date is earlier than another\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 a \cf17 \strokec17 <\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Add n days to an existing date\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 var\cf6 \strokec6  milliseconds \cf17 \strokec17 =\cf6 \strokec6  a.getTime\cf17 \strokec17 ();\cf6 \strokec6  \cb1 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  numInMs \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 (3600000\cf6 \strokec6  \cf17 \strokec17 *\cf6 \strokec6  \cf17 \strokec17 24)\cf6 \strokec6  \cf17 \strokec17 *\cf6 \strokec6  b\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 milliseconds \cf17 \strokec17 +\cf6 \strokec6  numInMs\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf15 \strokec15 const\cf6 \strokec6  currentDays \cf17 \strokec17 =\cf6 \strokec6  a.getDate\cf17 \strokec17 ();\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  a.setDate\cf17 \strokec17 (\cf6 \strokec6 currentDays \cf17 \strokec17 +\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Calculate difference between two dates in hours, minutes, and seconds\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  obj \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16        hrs: \cf17 \strokec17 0,\cf6 \strokec6 min: \cf17 \strokec17 0,\cf6 \strokec6 sec: \cf17 \strokec17 0\cf6 \cb1 \strokec6 \
+\cb16    \cf17 \strokec17 \};\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 var\cf6 \strokec6  delta \cf17 \strokec17 =\cf6 \strokec6  Math.abs\cf17 \strokec17 (\cf6 \strokec6 b \cf17 \strokec17 -\cf6 \strokec6  a\cf17 \strokec17 )\cf6 \strokec6  / \cf17 \strokec17 1000;\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 var\cf6 \strokec6  days \cf17 \strokec17 =\cf6 \strokec6  Math.floor\cf17 \strokec17 (\cf6 \strokec6 delta / \cf17 \strokec17 86400);\cf6 \cb1 \strokec6 \
+\cb16    delta \cf17 \strokec17 -=\cf6 \strokec6  days \cf17 \strokec17 *\cf6 \strokec6  \cf17 \strokec17 86400;\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cb16    \cf15 \strokec15 var\cf6 \strokec6  hours \cf17 \strokec17 =\cf6 \strokec6  Math.floor\cf17 \strokec17 (\cf6 \strokec6 delta / \cf17 \strokec17 3600)\cf6 \strokec6  % \cf17 \strokec17 24;\cf6 \cb1 \strokec6 \
+\cb16    delta \cf17 \strokec17 -=\cf6 \strokec6  hours \cf17 \strokec17 *\cf6 \strokec6  \cf17 \strokec17 3600;\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cb16    \cf15 \strokec15 var\cf6 \strokec6  minutes \cf17 \strokec17 =\cf6 \strokec6  Math.floor\cf17 \strokec17 (\cf6 \strokec6 delta / \cf17 \strokec17 60)\cf6 \strokec6  % \cf17 \strokec17 60;\cf6 \cb1 \strokec6 \
+\cb16    delta \cf17 \strokec17 -=\cf6 \strokec6  minutes \cf17 \strokec17 *\cf6 \strokec6  \cf17 \strokec17 60;\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cb16    \cf15 \strokec15 var\cf6 \strokec6  seconds \cf17 \strokec17 =\cf6 \strokec6  delta % \cf17 \strokec17 60;\cf6 \strokec6   \cb1 \
+\cb16    obj.hrs \cf17 \strokec17 =\cf6 \strokec6  hours\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    obj.min \cf17 \strokec17 =\cf6 \strokec6  minutes\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    obj.sec \cf17 \strokec17 =\cf6 \strokec6  seconds\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  obj\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf15 \strokec15 const\cf6 \strokec6  dif \cf17 \strokec17 =\cf6 \strokec6  Math.abs\cf17 \strokec17 (\cf6 \strokec6 a \cf17 \strokec17 -\cf6 \strokec6  b\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16   \cf15 \strokec15 const\cf6 \strokec6  hrs \cf17 \strokec17 =\cf6 \strokec6  Math.floor\cf17 \strokec17 (\cf6 \strokec6 dif / \cf17 \strokec17 1000\cf6 \strokec6  / \cf17 \strokec17 60\cf6 \strokec6  / \cf17 \strokec17 60);\cf6 \cb1 \strokec6 \
+\cb16   \cf15 \strokec15 const\cf6 \strokec6  min \cf17 \strokec17 =\cf6 \strokec6  Math.floor\cf17 \strokec17 (\cf6 \strokec6 dif / \cf17 \strokec17 1000\cf6 \strokec6  / \cf17 \strokec17 60)\cf6 \strokec6  % \cf17 \strokec17 (\cf6 \strokec6 hrs \cf17 \strokec17 *\cf6 \strokec6  \cf17 \strokec17 60\cf6 \strokec6  || \cf17 \strokec17 60);\cf6 \cb1 \strokec6 \
+\cb16   \cf15 \strokec15 const\cf6 \strokec6  sec \cf17 \strokec17 =\cf6 \strokec6  Math.floor\cf17 \strokec17 (\cf6 \strokec6 dif / \cf17 \strokec17 1000)\cf6 \strokec6  % \cf17 \strokec17 (\cf6 \strokec6 min \cf17 \strokec17 *\cf6 \strokec6  \cf17 \strokec17 60\cf6 \strokec6  \cf17 \strokec17 +\cf6 \strokec6  hrs \cf17 \strokec17 *\cf6 \strokec6  \cf17 \strokec17 60\cf6 \strokec6  \cf17 \strokec17 *\cf6 \strokec6  \cf17 \strokec17 60\cf6 \strokec6  || \cf17 \strokec17 60);\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6  hrs\cf17 \strokec17 ,\cf6 \strokec6  min\cf17 \strokec17 ,\cf6 \strokec6  sec \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Return the next nearest quarter hour of a date\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 date\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cb16      \cf15 \strokec15 const\cf6 \strokec6  minute \cf17 \strokec17 =\cf6 \strokec6  date.getUTCMinutes\cf17 \strokec17 ();\cf6 \cb1 \strokec6 \
+\cb16      \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 (\cf6 \strokec6 minute \cf17 \strokec17 <=\cf6 \strokec6  \cf17 \strokec17 15)\cf6 \strokec6  ? \cf17 \strokec17 15\cf6 \strokec6  : \cf17 \strokec17 (\cf6 \strokec6 minute \cf17 \strokec17 <=\cf6 \strokec6  \cf17 \strokec17 30)\cf6 \strokec6  ? \cf17 \strokec17 30\cf6 \strokec6  : \cf17 \strokec17 (\cf6 \strokec6 minute \cf17 \strokec17 <=\cf6 \strokec6  \cf17 \strokec17 45)\cf6 \strokec6  ? \cf17 \strokec17 45\cf6 \strokec6  : \cf17 \strokec17 0;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 date\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cf15 \cb16 \strokec15 const\cf6 \strokec6  quarter \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 15\cf6 \strokec6  \cf17 \strokec17 *\cf6 \strokec6  \cf17 \strokec17 60\cf6 \strokec6  \cf17 \strokec17 *\cf6 \strokec6  \cf17 \strokec17 1000;\cf6 \cb1 \strokec6 \
+\cf15 \cb16 \strokec15 const\cf6 \strokec6  closestQuarter \cf17 \strokec17 =\cf6 \strokec6  \cf15 \strokec15 new\cf6 \strokec6  Date\cf17 \strokec17 (\cf6 \strokec6 Math.round\cf17 \strokec17 (\cf6 \strokec6 date / quarter\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 *\cf6 \strokec6  quarter\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cf15 \cb16 \strokec15 const\cf6 \strokec6  nextQuarter \cf17 \strokec17 =\cf6 \strokec6  closestQuarter.getTime\cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 <\cf6 \strokec6  date.getTime\cf17 \strokec17 ()\cf6 \strokec6  ? \cf15 \strokec15 new\cf6 \strokec6  Date\cf17 \strokec17 (\cf6 \strokec6 closestQuarter.getTime\cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 +\cf6 \strokec6  quarter\cf17 \strokec17 )\cf6 \strokec6  : closestQuarter\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf18 \cb16 \strokec18 return\cf6 \strokec6  nextQuarter.getMinutes\cf17 \strokec17 ();\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs48 \cf21 Javascript Sets\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Check if value is present in Set\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 set\cf17 \strokec17 ,\cf6 \strokec6  val\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  set.has\cf17 \strokec17 (\cf6 \strokec6 val\cf17 \strokec17 )\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \strokec13 Convert a Set to Array\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 set\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  Array.from\cf17 \strokec17 (\cf6 \strokec6 set\cf17 \strokec17 )\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 set\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  \cf17 \strokec17 [\cf6 \strokec6 ...set\cf17 \strokec17 ];\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Get union of two sets\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  \cf15 \strokec15 new\cf6 \strokec6  Set\cf17 \strokec17 ([\cf6 \strokec6 ...a\cf17 \strokec17 ,\cf6 \strokec6  ...b\cf17 \strokec17 ])\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf15 \strokec15 const\cf6 \strokec6  result \cf17 \strokec17 =\cf6 \strokec6  \cf15 \strokec15 new\cf6 \strokec6  Set\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16   b.forEach\cf17 \strokec17 ((\cf6 \strokec6 el\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  result.add\cf17 \strokec17 (\cf6 \strokec6 el\cf17 \strokec17 ));\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  result\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \strokec13 Creating Javascript Sets\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 ,\cf6 \strokec6  c\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf15 \strokec15 let\cf6 \strokec6  myset \cf17 \strokec17 =\cf6 \strokec6  \cf15 \strokec15 new\cf6 \strokec6  Set\cf17 \strokec17 ();\cf6 \cb1 \strokec6 \
+\cb16    myset.add\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16    myset.add\cf17 \strokec17 (\cf6 \strokec6 b\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16    myset.add\cf17 \strokec17 (\cf6 \strokec6 c\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  myset\cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf22 \cb10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Zenn solution
+\f2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf23 function myFunction(a, b, c) \{\
+  return new Set([a,b,c])\
+\}\cf6 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Delete element from Set\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 set\cf17 \strokec17 ,\cf6 \strokec6  val\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    set.\cf15 \strokec15 delete\cf17 \strokec17 (\cf6 \strokec6 val\cf17 \strokec17 )\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  set\cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \strokec13 Add multiple elements to Set\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 set\cf17 \strokec17 ,\cf6 \strokec6  arr\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 for\cf17 \strokec17 (\cf15 \strokec15 let\cf6 \strokec6  i \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 0;\cf6 \strokec6  i \cf17 \strokec17 <\cf6 \strokec6  arr.length\cf17 \strokec17 ;\cf6 \strokec6  i\cf17 \strokec17 ++)\{\cf6 \cb1 \strokec6 \
+\cb16            \cf18 \strokec18 if\cf17 \strokec17 (\cf6 \strokec6 set.has\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ])\cf6 \strokec6  \cf17 \strokec17 ===\cf6 \strokec6  \cf15 \strokec15 false\cf17 \strokec17 )\{\cf6 \cb1 \strokec6 \
+\cb16            set.add\cf17 \strokec17 (\cf6 \strokec6 arr\cf17 \strokec17 [\cf6 \strokec6 i\cf17 \strokec17 ]);\cf6 \cb1 \strokec6 \
+\cb16            \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16        \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  set\cb1 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 set\cf17 \strokec17 ,\cf6 \strokec6  arr\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   arr.forEach\cf17 \strokec17 ((\cf6 \strokec6 e\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  set.add\cf17 \strokec17 (\cf6 \strokec6 e\cf17 \strokec17 ));\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  set\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\
+\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Zennn\cf6 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs28\fsmilli14400 \cf25 \cb26 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec25 function\cf6 \strokec6  \cf27 \strokec27 myFunction\cf28 \strokec28 (\cf6 \strokec6 set\cf28 \strokec28 ,\cf6 \strokec6  arr\cf28 \strokec28 )\cf6 \strokec6  \cf28 \strokec28 \{\cf6 \strokec6 \
+  \cf25 \strokec25 return\cf6 \strokec6  \cf25 \strokec25 new\cf6 \strokec6  Set\cf28 \strokec28 ([\cf29 \strokec29 ...\cf6 \strokec6 set\cf28 \strokec28 ,\cf6 \strokec6  \cf29 \strokec29 ...\cf6 \strokec6 arr\cf28 \strokec28 ]);\cf6 \strokec6 \
+\cf28 \strokec28 \}
+\f2\fs32 \cf6 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Get Intersection of two Javascript Sets\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16    \cb1 \
+\cb16    \cf18 \strokec18 return\cf6 \strokec6  \cf15 \strokec15 new\cf6 \strokec6  Set\cf17 \strokec17 ([\cf6 \strokec6 ...a\cf17 \strokec17 ]\cf6 \strokec6 .\cf19 \strokec19 filter\cf17 \strokec17 (\cf6 \strokec6 i \cf17 \strokec17 =>\cf6 \strokec6  b.has\cf17 \strokec17 (\cf6 \strokec6 i\cf17 \strokec17 )));\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\cf15 \cb16 \strokec15 function\cf6 \strokec6  myFunction\cf17 \strokec17 (\cf6 \strokec6 a\cf17 \strokec17 ,\cf6 \strokec6  b\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16   \cf15 \strokec15 const\cf6 \strokec6  int \cf17 \strokec17 =\cf6 \strokec6  \cf15 \strokec15 new\cf6 \strokec6  Set\cf17 \strokec17 ();\cf6 \cb1 \strokec6 \
+\cb16   a.forEach\cf17 \strokec17 (\cf6 \strokec6 el \cf17 \strokec17 =>\cf6 \strokec6  b.has\cf17 \strokec17 (\cf6 \strokec6 el\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 &&\cf6 \strokec6  int.add\cf17 \strokec17 (\cf6 \strokec6 el\cf17 \strokec17 ));\cf6 \cb1 \strokec6 \
+\cb16   \cf18 \strokec18 return\cf6 \strokec6  int\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cf17 \cb16 \strokec17 \}\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\
+\
+\
+\
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs48 \cf21 Javascript DOM\
+\pard\pardeftab720\sl540\qc\partightenfactor0
+
+\fs45 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 DOM selector methods\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\fs36 \cf13 Select the button element on the page\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf30 \strokec30 // assign the correct element to the variable\cf24 \strokec24 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf15 \cb16 \strokec15 const\cf31 \strokec31  buttonElem \cf17 \strokec17 =\cf31 \strokec31  document.getElementById\cf17 \strokec17 (\cf20 \strokec20 "button"\cf17 \strokec17 )\
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Query descendent HTML elements\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf30 \strokec30 // assign the correct elements to the variables\cf31 \strokec31 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf15 \cb16 \strokec15 const\cf6 \strokec6  buttonElem \cf17 \strokec17 =\cf6 \strokec6  document.\cf19 \strokec19 querySelector\cf17 \strokec17 (\cf20 \strokec20 "#wrapper button"\cf17 \strokec17 );\cf6 \strokec6 \
+  \cf15 \strokec15 const\cf6 \strokec6  inputElem \cf17 \strokec17 =\cf6 \strokec6  document.\cf19 \strokec19 querySelector\cf17 \strokec17 (\cf20 \strokec20 "#wrapper input"\cf17 \strokec17 );\cf6 \strokec6 \
+  \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+Select multiple HTML elements\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+Your Solution\cf6 \
+\pard\pardeftab720\partightenfactor0
+\cf15 \cb16 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec15 const\cf31 \strokec31  listItems \cf17 \strokec17 =\cf31 \strokec31  document.\cf19 \strokec19 querySelectorAll\cf17 \strokec17 (\cf20 \strokec20 "ul > li"\cf17 \strokec17 )\cf6 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf6 \cb14 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb16   \cf15 \strokec15 const\cf6 \strokec6  listItems \cf17 \strokec17 =\cf6 \strokec6  document.\cf19 \strokec19 querySelectorAll\cf17 \strokec17 (\cf20 \strokec20 "#list li"\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\f1\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 Query and exclude HTML elements\
+\pard\pardeftab720\qc\partightenfactor0
+
+\f2\fs32 \cf6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+\cf15 \cb16 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec15 const\cf31 \strokec31  target \cf17 \strokec17 =\cf31 \strokec31  document.\cf19 \strokec19 querySelectorAll\cf17 \strokec17 (\cf20 \strokec20 "ul li"\cf17 \strokec17 );\cf31 \strokec31 \
+\cf15 \strokec15 const\cf31 \strokec31  listItems \cf17 \strokec17 =\cf31 \strokec31  Array.from\cf17 \strokec17 (\cf31 \strokec31 target\cf17 \strokec17 )\cf31 \strokec31 .\cf19 \strokec19 filter\cf17 \strokec17 (\cf31 \strokec31 cur \cf17 \strokec17 =>\cf31 \strokec31  cur.id !\cf17 \strokec17 ==\cf31 \strokec31  \cf20 \strokec20 'disabled'\cf17 \strokec17 );\cf31 \strokec31 \
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf6 \cb14 \strokec6 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb16   \cf15 \strokec15 const\cf6 \strokec6  listItems \cf17 \strokec17 =\cf6 \strokec6  document.\cf19 \strokec19 querySelectorAll\cf17 \strokec17 (\cf20 \strokec20 '#list li:not(#disabled)'\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16   \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs36 \cf13 \strokec13 \
+\pard\pardeftab720\sl540\qc\partightenfactor0
+
+\fs45 \cf12 Events and user interactions\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+
+\fs36 \cf13 Execute function on button click\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \cb16 \strokec6 button.\cf19 \strokec19 addEventListener\cf17 \strokec17 (\cf20 \strokec20 'click'\cf17 \strokec17 ,\cf6 \strokec6  handleClick\cf17 \strokec17 );
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Execute function when cursor moves onto element\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \cb16 \strokec6 element.\cf19 \strokec19 addEventListener\cf17 \strokec17 (\cf20 \strokec20 "mouseover"\cf17 \strokec17 ,\cf6 \strokec6  changeText\cf17 \strokec17 );
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Cursor enters and leaves element\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \cb16 \strokec6 element.\cf19 \strokec19 addEventListener\cf17 \strokec17 (\cf20 \strokec20 'mouseover'\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  toggleColor\cf17 \strokec17 (\cf15 \strokec15 true\cf17 \strokec17 ));\cf6 \strokec6 \
+  element.\cf19 \strokec19 addEventListener\cf17 \strokec17 (\cf20 \strokec20 'mouseleave'\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  toggleColor\cf17 \strokec17 (\cf15 \strokec15 false\cf17 \strokec17 ));\cf6 \strokec6 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Move element with mouse cursor\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \cb16 \strokec6 wrapper.\cf19 \strokec19 addEventListener\cf17 \strokec17 (\cf20 \strokec20 'mousemove'\cf17 \strokec17 ,\cf6 \strokec6  moveRight\cf17 \strokec17 );
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Drop element into another element\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf31 \cb16 \strokec31 dropArea.\cf19 \strokec19 addEventListener\cf17 \strokec17 (\cf20 \strokec20 "drop"\cf17 \strokec17 ,\cf31 \strokec31 handleDrop\cf17 \strokec17 );\cf31 \strokec31 \
+dragItem.\cf19 \strokec19 addEventListener\cf17 \strokec17 (\cf20 \strokec20 'drag'\cf17 \strokec17 ,\cf31 \strokec31  \cf17 \strokec17 ()\cf31 \strokec31  \cf17 \strokec17 =>\cf31 \strokec31  handleDrop\cf17 \strokec17 ());\cf31 \strokec31 \
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\pard\pardeftab720\sl540\qc\partightenfactor0
+
+\fs45 \cf21 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 DOM manipulation
+\fs36 \cf13 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec13 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Remove element from the DOM\cf24 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf24 \strokec15 const\strokec31  removeRedCircle \strokec17 =\strokec31  \strokec17 ()\strokec31  \strokec17 =>\strokec31  \strokec17 \{\strokec31 \
+\
+\strokec15 const\strokec31  target \strokec17 =\strokec31  document.getElementById\strokec17 (\strokec20 "red"\strokec17 );\strokec31 \
+target.remove\strokec17 ();\strokec31 \
+\strokec17 \};\strokec31 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs36 \cf13 \strokec13 \
+\
+
+\f2\fs32 \cf15 \cb16 \strokec15 const\cf6 \strokec6  removeRedCircle \cf17 \strokec17 =\cf6 \strokec6  \cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6 \
+    \cf15 \strokec15 const\cf6 \strokec6  redCircle \cf17 \strokec17 =\cf6 \strokec6  document.\cf19 \strokec19 querySelector\cf17 \strokec17 (\cf20 \strokec20 '#red'\cf17 \strokec17 );\cf6 \strokec6 \
+    redCircle.parentNode.removeChild\cf17 \strokec17 (\cf6 \strokec6 redCircle\cf17 \strokec17 );\cf6 \strokec6 \
+  \cf17 \strokec17 \};\cf6 \strokec6 \
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Change id of HTML element\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \cb16 \strokec6 document.\cf19 \strokec19 querySelector\cf17 \strokec17 (\cf20 \strokec20 '#wrapper input'\cf17 \strokec17 )\cf6 \strokec6 .setAttribute\cf17 \strokec17 (\cf20 \strokec20 'id'\cf17 \strokec17 ,\cf6 \strokec6  \cf20 \strokec20 'inputEl'\cf17 \strokec17 );
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Wrap element in div\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf15 \cb16 \strokec15 const\cf31 \strokec31  div \cf17 \strokec17 =\cf31 \strokec31  document.createElement\cf17 \strokec17 (\cf20 \strokec20 "div"\cf17 \strokec17 );\cf31 \strokec31 \
+div.setAttribute\cf17 \strokec17 (\cf20 \strokec20 "id"\cf17 \strokec17 ,\cf31 \strokec31  \cf20 \strokec20 "wrapper"\cf17 \strokec17 );\cf31 \strokec31 \
+\pard\pardeftab720\partightenfactor0
+\cf31 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf15 \cb16 \strokec15 const\cf31 \strokec31  target \cf17 \strokec17 =\cf31 \strokec31  document.\cf19 \strokec19 querySelector\cf17 \strokec17 (\cf20 \strokec20 "#button"\cf17 \strokec17 );\cf31 \strokec31 \
+target.after\cf17 \strokec17 (\cf31 \strokec31 div\cf17 \strokec17 )\cf31 \strokec31 \
+div.appendChild\cf17 \strokec17 (\cf31 \strokec31 target\cf17 \strokec17 )\cf31 \strokec31 \
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\
+
+\f2\fs32 \cf15 \cb16 \strokec15 const\cf6 \strokec6  button \cf17 \strokec17 =\cf6 \strokec6  document.\cf19 \strokec19 querySelector\cf17 \strokec17 (\cf20 \strokec20 '#button'\cf17 \strokec17 );\cf6 \strokec6 \
+  \
+  \cf15 \strokec15 const\cf6 \strokec6  wrapper \cf17 \strokec17 =\cf6 \strokec6  document.createElement\cf17 \strokec17 (\cf20 \strokec20 'div'\cf17 \strokec17 );\cf6 \strokec6 \
+  wrapper.setAttribute\cf17 \strokec17 (\cf20 \strokec20 'id'\cf17 \strokec17 ,\cf6 \strokec6  \cf20 \strokec20 'wrapper'\cf17 \strokec17 );\cf6 \strokec6 \
+  button.parentNode.append\cf17 \strokec17 (\cf6 \strokec6 wrapper\cf17 \strokec17 );\cf6 \strokec6 \
+  wrapper.append\cf17 \strokec17 (\cf6 \strokec6 button\cf17 \strokec17 );\cf6 \strokec6 \
+  \
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Create new list item and add to DOM\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf15 \cb16 \strokec15 const\cf6 \strokec6  button \cf17 \strokec17 =\cf6 \strokec6  document.getElementById\cf17 \strokec17 (\cf20 \strokec20 'button'\cf17 \strokec17 );\cf6 \strokec6 \
+  button.\cf19 \strokec19 addEventListener\cf17 \strokec17 (\cf20 \strokec20 'click'\cf6 \strokec6  \cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6 \
+    \cf15 \strokec15 const\cf6 \strokec6  input \cf17 \strokec17 =\cf6 \strokec6  document.querySelector\cf17 \strokec17 (\cf20 \strokec20 \'91#input'\cf17 \strokec17 );\cf6 \strokec6 \
+    \cf15 \strokec15 const\cf6 \strokec6  list \cf17 \strokec17 =\cf6 \strokec6  document.querySelector\cf17 \strokec17 (\cf20 \strokec20 \'91#list'\cf17 \strokec17 );\cf6 \strokec6 \
+    \cf15 \strokec15 const\cf6 \strokec6  newItem \cf17 \strokec17 =\cf6 \strokec6  document.createElement\cf17 \strokec17 (\cf20 \strokec20 'li'\cf17 \strokec17 );\cf6 \strokec6 \
+    newItem.innerText \cf17 \strokec17 =\cf6 \strokec6  input.value\cf17 \strokec17 ;\cf6 \strokec6 \
+    list.append\cf17 \strokec17 (\cf6 \strokec6 newItem\cf17 \strokec17 );\cf6 \strokec6 \
+  \cf17 \strokec17 \});\cf6 \strokec6 \
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Check the checkbox\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf15 \cb16 \strokec15 onst\cf6 \strokec6  checkbox \cf17 \strokec17 =\cf6 \strokec6  document.getElementById\cf17 \strokec17 (\cf20 \strokec20 'checkbox'\cf17 \strokec17 );\cf6 \strokec6 \
+    checkbox.checked \cf17 \strokec17 =\cf6 \strokec6  \cf15 \strokec15 true\cf17 \strokec17 ;\cf6 \strokec6 \
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Increment the counter on button click\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf24 \cb32 \strokec15 const\strokec31  button \strokec17 =\strokec31  document.getElementById\strokec17 (\strokec20 'button'\strokec17 );\strokec31 \
+button.\strokec19 addEventListener\strokec17 (\strokec20 'click'\strokec31  \strokec17 ,\strokec31  \strokec17 ()\strokec31  \strokec17 =>\strokec31  \strokec17 \{\strokec31 \
+  \strokec30 // type in your code here\strokec31 \
+\
+button.innerHTML \strokec17 =\strokec31  Number\strokec17 (\strokec31 button.innerHTML\strokec17 )\strokec31  \strokec17 +\strokec31  \strokec17 1;\strokec31 \
+\strokec17 \});\strokec31 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+
+\f2\fs32 \cf15 \cb16 \strokec15 const\cf6 \strokec6  button \cf17 \strokec17 =\cf6 \strokec6  document.getElementById\cf17 \strokec17 (\cf20 \strokec20 'button'\cf17 \strokec17 );\cf6 \strokec6 \
+  button.\cf19 \strokec19 addEventListener\cf17 \strokec17 (\cf20 \strokec20 'click'\cf6 \strokec6  \cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6 \
+    \cf15 \strokec15 const\cf6 \strokec6  oldValue \cf17 \strokec17 =\cf6 \strokec6  \cf19 \strokec19 parseInt\cf17 \strokec17 (\cf6 \strokec6 button.innerText\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 10);\cf6 \strokec6 \
+    button.innerText \cf17 \strokec17 =\cf6 \strokec6  oldValue \cf17 \strokec17 +\cf6 \strokec6  \cf17 \strokec17 1;\cf6 \strokec6 \
+  \cf17 \strokec17 \});\cf6 \strokec6 \
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Input filter list\
+\pard\pardeftab720\partightenfactor0
+\cf13 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf24 \strokec15 const\strokec31  input \strokec17 =\strokec31  document.getElementById\strokec17 (\strokec20 'input'\strokec17 );\strokec31 \
+input.\strokec19 addEventListener\strokec17 (\strokec20 'input'\strokec17 ,\strokec31  \strokec17 ()\strokec31  \strokec17 =>\strokec31  \strokec17 \{\strokec31 \
+  \strokec30 // type in your code here\strokec31 \
+\
+\strokec15 const\strokec31  list \strokec17 =\strokec31  document.getElementById\strokec17 (\strokec20 'list'\strokec17 );\strokec31 \
+\strokec15 const\strokec31  listItem \strokec17 =\strokec31  Array.from\strokec17 (\strokec31 list.children\strokec17 );\strokec31 \
+listItem.forEach\strokec17 ((\strokec31 item\strokec17 )\strokec31  \strokec17 =>\strokec31  \strokec17 \{\strokec31 \
+    !\strokec17 (\strokec31 item.innerHTML.\strokec19 includes\strokec17 (\strokec31 input.value\strokec17 ))\strokec31  \
+      ? item.style.display\strokec17 =\strokec20 'none'\strokec31  \
+      : item.style.display\strokec17 =\strokec20 ''\strokec31 \
+  \strokec17 \});\strokec31 \
+\
+\strokec17 \});\strokec31 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs36 \cf13 \strokec13 \
+\
+
+\f2\fs32 \cf15 \cb16 \strokec15 const\cf6 \strokec6  input \cf17 \strokec17 =\cf6 \strokec6  document.getElementById\cf17 \strokec17 (\cf20 \strokec20 'input'\cf17 \strokec17 );\cf6 \strokec6 \
+  input.\cf19 \strokec19 addEventListener\cf17 \strokec17 (\cf20 \strokec20 'input'\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6 \
+    \cf15 \strokec15 const\cf6 \strokec6  listItems \cf17 \strokec17 =\cf6 \strokec6  document.\cf19 \strokec19 querySelectorAll\cf17 \strokec17 (\cf20 \strokec20 '#list li'\cf17 \strokec17 );\cf6 \strokec6 \
+    listItems.forEach\cf17 \strokec17 (\cf6 \strokec6 li \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6 \
+      \cf18 \strokec18 if\cf17 \strokec17 (\cf6 \strokec6 li.innerText.\cf19 \strokec19 includes\cf17 \strokec17 (\cf6 \strokec6 input.value\cf17 \strokec17 ))\cf6 \strokec6  \cf18 \strokec18 return\cf6 \strokec6  li.hidden \cf17 \strokec17 =\cf6 \strokec6  \cf15 \strokec15 false\cf17 \strokec17 ;\cf6 \strokec6 \
+      \cf18 \strokec18 return\cf6 \strokec6  li.hidden \cf17 \strokec17 =\cf6 \strokec6  \cf15 \strokec15 true\cf17 \strokec17 ;\cf6 \strokec6 \
+    \cf17 \strokec17 \})\cf6 \strokec6 \
+  \cf17 \strokec17 \});\cf6 \strokec6 \
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Pop the balloons\
+\pard\pardeftab720\partightenfactor0
+\cf13 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf24 \strokec15 const\strokec31  list \strokec17 =\strokec31  document.getElementById\strokec17 (\strokec20 'list'\strokec17 );\strokec31 \
+\
+\strokec15 const\strokec31  targets \strokec17 =\strokec31  Array.from\strokec17 (\strokec31 list.childNodes\strokec17 );\strokec31 \
+\
+targets.forEach\strokec17 ((\strokec31 target\strokec17 )\strokec31  \strokec17 =>\strokec31  \strokec17 \{\strokec31 \
+target.\strokec19 addEventListener\strokec17 (\strokec20 'mouseover'\strokec17 ,\strokec31  \strokec17 ()\strokec31  \strokec17 =>\strokec31  \strokec17 \{\strokec31 target.style.visibility\strokec17 =\strokec31  \strokec20 "hidden"\strokec17 \})\}\strokec31 \
+\strokec17 )\strokec31 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs36 \cf13 \strokec13 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf6 \cb14 \strokec6 The author's solution\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb16   \cf15 \strokec15 const\cf6 \strokec6  list \cf17 \strokec17 =\cf6 \strokec6  document.getElementById\cf17 \strokec17 (\cf20 \strokec20 'list'\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\cb16   \cf15 \strokec15 const\cf6 \strokec6  handleHover \cf17 \strokec17 =\cf6 \strokec6  event \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16     \cf18 \strokec18 if\cf17 \strokec17 (\cf6 \strokec6 event.target !\cf17 \strokec17 ==\cf6 \strokec6  list\cf17 \strokec17 )\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \cb1 \strokec6 \
+\cb16       event.target.style.visibility \cf17 \strokec17 =\cf6 \strokec6  \cf20 \strokec20 'hidden'\cf17 \strokec17 ;\cf6 \cb1 \strokec6 \
+\cb16     \cf17 \strokec17 \}\cf6 \cb1 \strokec6 \
+\cb16   \cf17 \strokec17 \};\cf6 \cb1 \strokec6 \
+\cb16   \cb1 \
+\cb16   list.\cf19 \strokec19 addEventListener\cf17 \strokec17 (\cf20 \strokec20 'mouseover'\cf17 \strokec17 ,\cf6 \strokec6  handleHover\cf17 \strokec17 );\cf6 \cb1 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs36 \cf13 \strokec13 \
+\pard\pardeftab720\sl480\qc\partightenfactor0
+\cf13 Stop and restart the moving button\
+\pard\pardeftab720\partightenfactor0
+\cf13 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf6 \cb16 \strokec6 button.\cf19 \strokec19 addEventListener\cf17 \strokec17 (\cf20 \strokec20 'click'\cf17 \strokec17 ,\cf6 \strokec6  \cf17 \strokec17 ()\cf6 \strokec6  \cf17 \strokec17 =>\cf6 \strokec6  \cf17 \strokec17 \{\cf6 \strokec6 \
+    stopped \cf17 \strokec17 =\cf6 \strokec6  !stopped\cf17 \strokec17 ;\cf6 \strokec6 \
+    move\cf17 \strokec17 ();\cf6 \strokec6 \
+  \cf17 \strokec17 \});\cf6 \strokec6 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs36 \cf13 \cb1 \strokec13 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
